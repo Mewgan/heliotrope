@@ -1,0 +1,46 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+    <style>
+        #subheader{
+            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
+        }
+    </style>
+{% endblock %}
+
+{% block page %}
+
+    <!-- subheader -->
+    <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ data.page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+    <!-- content begin -->
+    <div id="content">
+        <div class="container">
+            <div class="row">
+
+                {% set teams = field_render('teams', 'page@'~data.page.id) %}
+                {% for team in teams %}
+                    <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInLeft" data-wow-delay=".8s">
+                        <div class="team-member">
+                            <img src="{{ img(team.image.path) }}" class="img-circle pic-grey" alt="{{ team.image.alt }}" />
+                            <h3>{{ team.name }}</h3>
+                            <p>{{ team.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

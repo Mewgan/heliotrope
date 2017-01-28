@@ -1,0 +1,22 @@
+{% block css %}
+    <style>
+        .side-bg .background-image{
+            background: url({{ img(post.thumbnail.path) }}) top;
+        }
+    </style>
+{% endblock %}
+
+<section aria-label="services-hair" class="side-bg">
+    <div class="col-md-6 image-container">
+        <div class="background-image"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-7">
+                <h2>{{ post.title }}</h2>
+                {{ post.content|raw }}
+            </div>
+        </div>
+    </div>
+</section>

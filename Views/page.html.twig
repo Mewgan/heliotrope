@@ -1,0 +1,31 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+    <style>
+        #subheader{
+            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
+        }
+    </style>
+{% endblock %}
+
+{% block page %}
+
+<!-- subheader -->
+<section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ data.route_params.slug | capitalize | replace({'-':' '}) }}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- subheader close -->
+
+<!-- content begin -->
+<div id="content" class="no-bottom no-top">
+   {{ page_render('', 'page') }}
+</div>
+
+{% endblock %}
+

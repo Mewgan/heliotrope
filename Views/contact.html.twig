@@ -1,0 +1,102 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+    <style>
+        #subheader{
+            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
+        }
+    </style>
+{% endblock %}
+
+{% block page %}
+
+    <!-- subheader -->
+    <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ data.page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+    <!-- content begin -->
+    <div id="content" class="no-top">
+
+        <!-- section begin -->
+        <section id="section-map" aria-label="section-map" class="no-top">
+            <div id="gmap" style="height:400px;"></div>
+        </section>
+        <!-- section close -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2>Contact</h2>
+                    <div class="small-border wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
+                </div>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <form name="contactForm" id='contact_form' class="deform-1" method="post" action='http://www.themenesia.com/themeforest/modis-new/email.php'>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div id='name_error' class='error'>Please enter your name.</div>
+                                <div>
+                                    <input type='text' name='name' id='name' class="form-control" placeholder="Your Name">
+                                </div>
+
+                                <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                                <div>
+                                    <input type='text' name='email' id='email' class="form-control" placeholder="Your Email">
+                                </div>
+
+                                <div id='phone_error' class='error'>Please enter your phone number.</div>
+                                <div>
+                                    <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div id='message_error' class='error'>Please enter your message.</div>
+                                <div>
+                                    <textarea name='message' id='message' class="form-control" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <p id='submit'>
+                                    <input type='submit' id='send_message' value='Submit Form' class="btn btn-custom">
+                                </p>
+                                <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                                <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- content begin -->
+
+{% endblock %}
+
+{% block js %}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArNGSSl-KPS23l24EilPNQhfmEw_V8BtI&libraries=places&region=FR"></script>
+    <script>
+        $(document).ready(function () {
+            var latlng = new google.maps.LatLng({{ address.latitude }}, {{ address.longitude }});
+            var map = new google.maps.Map(document.getElementById('gmap'), {
+                zoom: 13,
+                center: latlng
+            });
+            new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+        })
+    </script>
+{% endblock %}

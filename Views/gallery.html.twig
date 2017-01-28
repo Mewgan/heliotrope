@@ -1,0 +1,54 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+    <style>
+        #subheader{
+            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
+        }
+    </style>
+{% endblock %}
+
+{% block page %}
+
+    <!-- subheader -->
+    <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ data.page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+    <!-- content begin -->
+    <div id="content" class="no-top no-bottom">
+        <!-- section begin -->
+        <section id="section-gallery" aria-label="section-gallery" class="no-top no-bottom">
+
+            <div id="gallery" class="gallery zoom-gallery gallery-{{ field_render('gallery_column', 'page@'~data.page.id) }}-cols wow fadeInUp" data-wow-delay=".3s">
+
+                {% set galleries = field_render('galleries', 'page@'~data.page.id) %}
+                {% for gallery in galleries %}
+                <!-- gallery item -->
+                <div class="item">
+                    <div class="picframe">
+                        <a href="{{ img(gallery.image.path) }}" title="{{ gallery.image.title }}">
+                            <span class="overlay">
+                                <span class="pf_text">
+                                    <span class="project-name">{{ gallery.image.title }}</span>
+                                </span>
+                            </span>
+                            <img src="{{ img(gallery.image.path) }}" alt="{{ gallery.image.alt }}" />
+                        </a>
+                    </div>
+                </div>
+                <!-- close gallery item -->
+                {% endfor %}
+            </div>
+        </section>
+        <!-- section close -->
+    </div>
+
+{% endblock %}

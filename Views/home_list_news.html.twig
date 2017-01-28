@@ -1,0 +1,60 @@
+
+<!-- section begin -->
+<section id="section-hero-2" aria-label="section-hero-2" data-stellar-background-ratio=".2" data-bgcolor="#333"
+         class="text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt60 mb20 text-center">
+                <h4 class="mb30 font48">{{ field_render('news_title', 'page@'~data.page.id) }}</h4>
+                <div class="small-border wow zoomIn"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section close -->
+
+<!-- section begin -->
+<section id="section-blog" class="no-top">
+    <div class="container">
+        <div class="row">
+
+            <div class="clearfix"></div>
+
+            <ul id="blog-carousel" class="blog-list blog-snippet wow fadeInUp mt-60">
+                {% for post in posts %}
+                    {% set params = {} %}
+                    {% for arg in args %}
+                        {% if arg.value != '' %}
+                            {% set params = params|merge({(arg.route):arg.value}) %}
+                        {% else %}
+                            {% if arg.alias == 'p' %}
+                                {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
+                            {% elseif arg.alias == 'c' %}
+                                {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    <li class="col-md-6 item">
+                        <div class="post-content">
+                            <div class="post-image">
+                                <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload" alt="{{ post.thumbnail.alt }}"/>
+                            </div>
+
+                            <div class="date-box">
+                                <div class="day">{{ post.updated_at | date("d") }}</div>
+                                <div class="month">{{ post.updated_at | date("M") }}</div>
+                            </div>
+
+                            <div class="post-text">
+                                <h3><a href="{{ link(route,params) }}">{{ post.title }}</a></h3>
+                                <p>{{ post.description }}</p>
+                            </div>
+
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- section close -->
