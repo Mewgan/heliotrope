@@ -1,214 +1,109 @@
 {% extends template_from_string(data.website_layout) %}
 
 {% block css %}
-    <style>
-        #section-intro-2{background:url({{ img(field_render('homepage_1_background_image', 'page@'~data.page.id).path) }}); overflow:hidden;}
-        #explore-5.side-bg .background-image {background:url({{ img(field_render('about_us_image', 'page@'~data.page.id).path) }}) top;}
-        #section-hero-2{background:url({{ img(field_render('news_background', 'page@'~data.page.id).path) }}); overflow:hidden;}
-    </style>
+
 {% endblock %}
 
 {% block page %}
-    <!-- content begin -->
-    <div id="content" class="no-bottom no-top">
-
-        {% set theme_model = field_render('homepage_model', 'page@'~data.page.id) %}
-        {% if theme_model == 'static' %}
-            <!-- section begin -->
-            <section id="section-intro-2" aria-label="section-intro-2" class="full-height" data-stellar-background-ratio=".2">
-            <div class="center-y text-center">
-                {% set activities = field_render('homepage_1_activities', 'page@'~data.page.id) %}
-                <div class="spacer-single"></div>
-                <div class="type-wrap big-font">
-                    We do
-                    <div class="typed-strings">
-                        {% for activity in activities %}
-                            <p>{{ activity.title }}</p>
-                        {% endfor %}
-                    </div>
-                    <span class="typed"></span>
-                </div>
-                <div class="spacer-half"></div>
-                <div class="small-border wow zoomIn"></div>
-
-            </div>
-        </section>
-            <!-- section close -->
-        {% elseif theme_model == 'slider' %}
-            {% set slider = field_render('homepage_2', 'page@'~data.page.id) %}
-            <section id="section-slider" aria-label="section-slider" class="fullwidthbanner-container">
-                <div id="revolution-slider">
-                    <ul>
-                        {% for slide in slider %}
-                            <li data-transition="parallaxtoright" data-slotamount="10" data-masterspeed="1200" data-thumb="">
-                            <!--  BACKGROUND IMAGE -->
-                            <img src="{{ img(slide.image.path) }}" alt="{{ slide.image.alt }}" />
-
-                            <div class="tp-caption ultra-big-white sfb"
-                                 data-x="center"
-                                 data-y="190"
-                                 data-speed="1200"
-                                 data-start="600"
-                                 data-easing="easeInOutExpo"
-                                 data-endspeed="400">
-                                {{ slide.title }}
-                            </div>
-
-                            {% if slide.link != '' %}
-                                <div class="tp-caption sfb"
-                                     data-x="center"
-                                     data-y="320"
-                                     data-speed="1000"
-                                     data-start="1100"
-                                     data-easing="easeInOutExpo">
-                                    <a href="{{ slide.link }}" class="btn-slider">Voir plus
-                                    </a>
-                                </div>
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </section>
-        {% elseif theme_model == 'video' %}
-            <!-- video section -->
-            <section id="section-intro-video" class="full-height no-padding" data-stellar-background-ratio=".2">
-                <div class="de-video-container">
-                    <div class="de-video-content">
-                        <div class="text-center">
-                            <div class="spacer-single"></div>
-                            <h1 class="big-font">{{ field_render('homepage_3_title', 'page@'~data.page.id) }}</h1>
-                            <div class="spacer-single"></div>
-                            {% set model_3_link = field_render('homepage_3_link', 'page@'~data.page.id) %}
-                            {% if model_3_link != '' %}
-                                <a href="{{ model_3_link }}" class="btn-slider">Voir plus</a>
-                            {% endif %}
+    <!-- Section: home -->
+    <section id="home" class="divider parallax fullscreen" data-parallax-ratio="0.7"
+             data-bg-img="{{ field_render('subheader', 'page@'~data.page.id).path }}">
+        <div class="display-table">
+            <div class="display-table-cell">
+                <div class="container pt-200 pb-200">
+                    <div class="row">
+                        <div class="col-md-12 text-{{ field_render('homepage_header_text_align', 'page@'~data.page.id) }}">
+                            {{ field_render('homepage_header_text', 'page@'~data.page.id) | raw }}
+                            <a href="{{ booking_link }}"
+                               class="btn btn-theme-colored btn-circled btn-lg smooth-scroll-to-target mt-10">Réserver</a>
                         </div>
-                    </div>
-
-                    <div class="de-video-overlay"></div>
-
-                    {% set video_link = field_render('homepage_3_link', 'page@'~data.page.id) %}
-                    {% if youtube in video_link %}
-                        <iframe width="100%" height="100%" src="{{ video_link }}?autoplay=1&loop=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
-                    {% else %}
-                        <!-- load your video here -->
-                        <video autoplay="" loop="" muted="">
-                            <source src="{{ video_link }}" type="video/mp4" />
-                        </video>
-                    {% endif %}
-                </div>
-            </section>
-            <!-- video section close -->
-        {% endif %}
-
-        <div class="no-padding mt-130 height90px mobile-hide absolute z-index500 width100 text-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="overlay10">
-
-                            <div class="row-fluid">
-                                <div class="col-md-4">
-                                    <div class="info-box padding20">
-                                        <i class="icon_clock_alt id-color"></i>
-                                        <div class="info-box_text">
-                                            <div class="info-box_title">Horaires d'ouvertures</div>
-                                            <div class="info-box_subtite">{{ opening_hours | raw }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="info-box padding20">
-                                        <i class="icon_house_alt id-color"></i>
-                                        <div class="info-box_text">
-                                            <div class="info-box_title">Lieu</div>
-                                            <div class="info-box_subtite">{{ address.address }}, {{ address.postal_code }} {{ address.city }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="info-box padding20">
-                                        <i class="icon_calendar id-color"></i>
-                                        <div class="info-box_text">
-                                            <div class="info-box_title">Contact</div>
-                                            <div class="info-box_subtite">{{ account.phone }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- section begin -->
-        <section id="section-top-reason" class="no-top no-bottom">
-            <div class="container-fluid">
-                <div class="row-fluid display-table">
-
-                    <div class="col-md-4 text-middle" data-bgcolor="#e2e2e2">
-                        <div class="padding40">
-                            <div class="box-icon">
-                                <i class="fa fa-tags wow zoomIn" data-wow-delay=".25s"></i>
-                                <div class="text">
-                                    {{ field_render('left_top_bloc','page@'~data.page.id) | raw }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 text-middle text-light" data-bgimage="url(/src/Themes/Balsamine/Resources/public/img/background/bg-div-1.jpg)">
-                        <div class="padding40 hoverdark30">
-                            <div class="box-icon">
-                                <i class="fa fa-tags wow zoomIn" data-wow-delay=".25s"></i>
-                                <div class="text">
-                                    {{ field_render('right_top_bloc','page@'~data.page.id) | raw }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 text-middle text-center" data-bgcolor="#50094d">
-                        <div class="padding40">
-                            <a href="{{ booking_link }}" class="btn btn-line-white btn-big wow fadeInUp" data-wow-delay=".3s">Réserver</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- section close -->
-
-        {{ content_render('list_home_service') }}
-
-        <!-- section begin -->
-        <section id="explore-5" class="side-bg text-light">
-            <div class="col-md-6 image-container">
-                <div class="background-image"></div>
-            </div>
-
-            <div class="container">
+    <!-- Section: About-->
+    <section id="about">
+        <div class="container">
+            <div class="section-content">
                 <div class="row">
-                    <div class="col-md-5 col-md-offset-7">
-                        <h2 class="wow-fadeIn">A propos de nous</h2>
-                        <div class="small-border left wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
-
-                        {{ field_render('about_us', 'page@'~data.page.id) }}
+                    <div class="col-md-3">
+                        {% set about_us = field_render('homepage_about_us', 'page@'~data.page.id) %}
+                        <div class="about-info">
+                            <h4 class="text-uppercase letter-space-2 mb-0">{{ about_us.title }}</h4>
+                            <p class="font-13">{{ about_us.description }}</p>
+                            <a href="{{ link('/article/:slug',{'slug': about_us.slug}) }}" class="btn btn-theme-colored btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                    {{ content_render('list_home_service') }}
+                    <div class="col-md-3">
+                        <div class="opening-hours p-15 pt-20 pb-60" style="background: black;">
+                            <h4 class="line-bottom text-white font-weight-400 mt-0">Horaires d'ouverture</h4>
+                            {{ opening_hours | raw }}
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- section close -->
+        </div>
+    </section>
 
-        {{ content_render('list_home_news') }}
+    <!-- Section: trainer -->
+    <section id="trainer" class="bg-lighter">
+        <div class="container pt-60 pb-0">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase title">Our hair <span
+                                    class="text-black font-weight-300">Experts</span></h2>
+                        <p class="text-uppercase letter-space-4">Best Hair Care Theme on Themeforest.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row ml-md-0">
+                    <div class="owl-carousel-4col">
+                        {% set teams = field_render('teams', 'page@'~data.page.id) %}
+                        {% for team in teams %}
+                            <div class="item">
+                                <div class="trainer-item">
+                                    <div class="trainer-thumb"><img src="{{ img(team.image.path) }}" alt="{{ team.image.alt }}"
+                                                                    class="img-fullwidth img-responsive"></div>
+                                    <div class="trainer-info">
+                                        <div class="trainer-biography">
+                                            <h3 class="text-white">{{ team.name }}</h3>
+                                            <h5 class="text-white">{{ team.description }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+   {{ content_render('list_home_news') }}
+
+    <!-- Section: Clients -->
+    <section class="divider bg-light">
+        <div class="container pt-30 pb-30">
+            <div class="section-content">
+                <div class="row">
+                    <div class="owl-carousel-6col clients-logo carousel">
+                        {% set partners = field_render('partners', 'page@'~data.page.id) %}
+                        {% for partner in partners %}
+                            <div class="item">
+                                <a>
+                                    <img src="{{ img(partner.image.path) }}" alt="{{ partner.image.alt }}">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

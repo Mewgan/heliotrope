@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -13,56 +13,56 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         /* Aster pages */
-        'society-balsamine-contact' =>  [
+        'society-heliotrope-contact' =>  [
             'title' => 'Contact',
             'route' => 'module:contact.type:static.action:show',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_contact_layout',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_contact_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-balsamine-gallery' =>  [
+        'society-heliotrope-gallery' =>  [
             'title' => 'Galerie',
             'route' => 'module:gallery.type:static.action:all',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_gallery_layout',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_gallery_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-balsamine-team' =>  [
-            'title' => 'Equipe',
-            'route' => 'module:team.type:static.action:all',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_team_layout',
+        'society-heliotrope-price' =>  [
+            'title' => 'Tarif',
+            'route' => 'module:price.type:static.action:all',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_price_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-balsamine-single-post' =>  [
+        'society-heliotrope-single-post' =>  [
             'title' => 'Article',
             'route' => 'module:post.type:dynamic.action:read',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'dynamic'
         ],
-        'society-balsamine-list-post' =>  [
+        'society-heliotrope-list-post' =>  [
             'title' => 'Liste d\'articles',
             'route' => 'module:post.type:dynamic.action:all',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'dynamic'
         ],
-        'society-balsamine-home' =>  [
+        'society-heliotrope-home' =>  [
             'title' => 'Accueil',
             'route' => 'home',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_simple_home_page_layout',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_home_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
@@ -85,8 +85,8 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
         return [
             'Jet\DataFixtures\LoadRoute',
             'Jet\Modules\Post\Fixtures\LoadPostRoute',
-            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
-            'Jet\Themes\Balsamine\Fixtures\LoadTemplate',
+            'Jet\Themes\Heliotrope\Fixtures\LoadWebsite',
+            'Jet\Themes\Heliotrope\Fixtures\LoadTemplate',
             'Jet\DataFixtures\LoadLibrary',
         ];
     }

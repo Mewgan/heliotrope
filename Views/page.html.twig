@@ -1,31 +1,47 @@
 {% extends template_from_string(data.website_layout) %}
 
 {% block css %}
-    <style>
-        #subheader{
-            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
-        }
-    </style>
+
 {% endblock %}
 
 {% block page %}
 
-<!-- subheader -->
-<section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>{{ data.route_params.slug | capitalize | replace({'-':' '}) }}</h1>
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{{ img(field_render('subheader', 'page@'~data.page.id).path) }}">
+        <div class="container pt-100 pb-50">
+            <!-- Section Content -->
+            <div class="section-content pt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title text-white">
+                            {% if data.page.type == 'dynamic' %}
+                                {{ data.route_params.slug | capitalize | replace({'-':' '}) }}
+                            {% else %}
+                                {{ data.page.title }}
+                            {% endif %}
+                        </h3>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- subheader close -->
+    </section>
 
-<!-- content begin -->
-<div id="content" class="no-bottom no-top">
    {{ page_render('', 'page') }}
-</div>
+
+    <section class="bg-theme-colored">
+        <div class="container pt-30 pb-30">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-400 text-white font-raleway letter-space-2">Not every woman has time to go to a salon and have her hair blow-dried every day.</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-dark mt-30 p-10 pl-20 pr-20 text-white btn-flat no-border" data-toggle="modal" data-target="#BSParentModal" href="{{ booking_link }}" class="bs-modal-ajax-load" >Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
 

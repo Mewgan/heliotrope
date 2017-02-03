@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -15,40 +15,66 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
     use LoadPostFixture;
 
     protected $data = [
-        /* Balsamine fields */
-        'balsamine_opening_hours' => [
+        /* Heliotrope fields */
+        'heliotrope_logo' => [
+            'scope' => 'global',
+            'title' => 'Logo',
+            'name' => 'logo',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Default Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo.png']
+        ],
+        'heliotrope_opening_hours' => [
             'scope' => 'global',
             'title' => 'Horaires d\'ouverture',
             'name' => 'opening_hours',
             'type' => 'wysiwyg',
-            'position' => 0,
+            'position' => 1,
             'parent' => null,
-            'cf' => 'Balsamine Default Global',
+            'cf' => 'Heliotrope Default Global',
             'data' => [],
-            'content' => ['value' => 'Monday - Friday: 09:00 - 22:00']
+            'content' => ['value' => '<ul class="list-border">
+                                <li class="clearfix"><span> Mon - Tues :  </span>
+                                    <div class="value pull-right"> 6.00 am - 10.00 pm</div>
+                                </li>
+                                <li class="clearfix"><span> Wednes - Thurs :</span>
+                                    <div class="value pull-right"> 8.00 am - 6.00 pm</div>
+                                </li>
+                                <li class="clearfix"><span> Fri : </span>
+                                    <div class="value pull-right"> 3.00 pm - 8.00 pm</div>
+                                </li>
+                                <li class="clearfix"><span> Sun : </span>
+                                    <div class="value pull-right"> Colosed</div>
+                                </li>
+                            </ul>']
         ],
-        'balsamine_social' => [
+        'heliotrope_social' => [
             'scope' => 'global',
             'title' => 'Réseaux sociaux',
             'name' => 'social_networks',
             'type' => 'repeater',
-            'position' => 1,
+            'position' => 2,
             'parent' => null,
-            'cf' => 'Balsamine Default Global',
+            'cf' => 'Heliotrope Default Global',
             'data' => [],
             'content' => [
                 'type' => 'repeater',
                 'rows' => [0,1]
             ]
         ],
-        'balsamine_social_name' => [
+        'heliotrope_social_name' => [
             'scope' => 'global',
             'title' => 'Nom',
             'name' => 'name',
             'type' => 'string',
             'position' => 0,
-            'parent' => 'balsamine_social',
-            'cf' => 'Balsamine Default Global',
+            'parent' => 'heliotrope_social',
+            'cf' => 'Heliotrope Default Global',
             'data' => [],
             'content' => [
                 'value' => [
@@ -57,14 +83,14 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 ]
             ]
         ],
-        'balsamine_social_link' => [
+        'heliotrope_social_link' => [
             'scope' => 'global',
             'title' => 'Lien',
             'name' => 'link',
             'type' => 'string',
             'position' => 1,
-            'parent' => 'balsamine_social',
-            'cf' => 'Balsamine Default Global',
+            'parent' => 'heliotrope_social',
+            'cf' => 'Heliotrope Default Global',
             'data' => [],
             'content' => [
                 'value' => [
@@ -73,446 +99,533 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 ]
             ]
         ],
-        'balsamine_booking' => [
+        'heliotrope_booking' => [
             'scope' => 'global',
             'title' => 'Lien du rendez-vous en ligne',
             'name' => 'booking_link',
             'type' => 'string',
-            'position' => 2,
+            'position' => 3,
             'parent' => null,
-            'cf' => 'Balsamine Default Global',
+            'cf' => 'Heliotrope Default Global',
             'data' => [],
             'content' => ['value' => '#']
         ],
         /* Theme specific */
-        'balsamine_sub_logo' => [
-            'scope' => 'global',
-            'title' => 'Logo réduit',
-            'name' => 'logo_light',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png']
-        ],
-        'balsamine_theme_color' => [
+        'heliotrope_theme_color' => [
             'scope' => 'global',
             'title' => 'Couleur du thème',
             'name' => 'theme_color',
             'type' => 'select',
-            'position' => 1,
+            'position' => 0,
             'parent' => null,
-            'cf' => 'Balsamine Specific Global',
+            'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
                     ['key' => 'green','value' => 'Vert'],
                     ['key' => 'orange','value' => 'Orange'],
                     ['key' => 'red','value' => 'Rouge'],
                     ['key' => 'blue','value' => 'Bleu'],
-                    ['key' => 'pink','value' => 'Rose'],
+                    ['key' => 'sky-blue','value' => 'Bleu ciel'],
+                    ['key' => 'sky-blue-light','value' => 'Bleu ciel light'],
+                    ['key' => 'lemon','value' => 'Citron'],
                     ['key' => 'yellow','value' => 'Jaune'],
-                    ['key' => 'purple','value' => 'Violet'],
+                    ['key' => 'rose','value' => 'Rose'],
+                    ['key' => 'gray','value' => 'Gris'],
+                    ['key' => 'blue-gray','value' => 'Bleu Gris'],
                     ['key' => 'brown','value' => 'Marron'],
-                    ['key' => 'aqua','value' => 'Aqua'],
                 ],
                 'multiple' => false
             ],
-            'content' => ['value' => 'pink']
+            'content' => ['value' => 'lemon']
         ],
-        'balsamine_header_style' => [
+        'heliotrope_header_color' => [
+            'scope' => 'global',
+            'title' => 'Couleur du menu',
+            'name' => 'navigation_color',
+            'type' => 'select',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Heliotrope Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => 'default','value' => 'Défaut'],
+                    ['key' => 'blue','value' => 'Bleu'],
+                    ['key' => 'green','value' => 'Vert'],
+                    ['key' => 'red','value' => 'Rouge'],
+                    ['key' => 'orange','value' => 'Orange'],
+                    ['key' => 'yellow','value' => 'Jaune'],
+                    ['key' => 'purple','value' => 'Violet'],
+                    ['key' => 'pink','value' => 'Rose'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => 'default']
+        ],
+        'heliotrope_header_style' => [
             'scope' => 'global',
             'title' => 'Position du menu',
             'name' => 'navigation_position',
             'type' => 'select',
             'position' => 2,
             'parent' => null,
-            'cf' => 'Balsamine Specific Global',
+            'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => 'center','value' => 'Milieu'],
-                    ['key' => 'left','value' => 'Gauche'],
+                    ['key' => 'menuzord-rounded-boxed','value' => 'Défaut'],
+                    ['key' => 'menuzord-border-top','value' => 'Border top'],
+                    ['key' => 'menuzord-border-bottom','value' => 'Border bottom'],
+                    ['key' => 'menuzord-border-boxed','value' => 'Border boxed'],
+                    ['key' => 'menuzord-border-left','value' => 'Border left'],
+                    ['key' => 'menuzord-border-top-bottom','value' => 'Border top bottom'],
+                    ['key' => 'menuzord-border-trace','value' => 'Border trace'],
+                    ['key' => 'menuzord-boxed','value' => 'Boxed'],
+                    ['key' => 'menuzord-colored','value' => 'Colored'],
+                    ['key' => 'menuzord-dark','value' => 'Dark'],
+                    ['key' => 'menuzord-gradient','value' => 'Gradient'],
+                    ['key' => 'menuzord-shadow','value' => 'Shadow'],
+                    ['key' => 'menuzord-strip','value' => 'Strip'],
+                    ['key' => 'menuzord-subcolored','value' => 'Sub-Colored'],
+                    ['key' => 'menuzord-top-bottom-boxed-border','value' => 'Top Bottom Boxed Border'],
                 ],
                 'multiple' => false
             ],
-            'content' => ['value' => 'center']
+            'content' => ['value' => 'menuzord-rounded-boxed']
+        ],
+        'heliotrope_title_font' => [
+            'scope' => 'global',
+            'title' => 'Police des titres',
+            'name' => 'title_font',
+            'type' => 'select',
+            'position' => 3,
+            'parent' => null,
+            'cf' => 'Heliotrope Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans",'value' => 'Open Sans'],
+                    ['key' => "'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans",'value' => 'Droid Sans'],
+                    ['key' => "'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans",'value' => 'PT Sans'],
+                    ['key' => "'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro",'value' => 'Source Sans Pro'],
+                    ['key' => "'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway",'value' => 'Raleway'],
+                    ['key' => "'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab",'value' => 'Josefin Slab'],
+                    ['key' => "'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto",'value' => 'Roboto'],
+                    ['key' => "'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif",'value' => 'Droid Serif'],
+                    ['key' => "'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald",'value' => 'Oswald'],
+                    ['key' => "'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato",'value' => 'Lato'],
+                    ['key' => "'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo",'value' => 'Arvo'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans"]
+        ],
+        'heliotrope_body_font' => [
+            'scope' => 'global',
+            'title' => 'Police du site',
+            'name' => 'body_font',
+            'type' => 'select',
+            'position' => 4,
+            'parent' => null,
+            'cf' => 'Heliotrope Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans",'value' => 'Open Sans'],
+                    ['key' => "'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans",'value' => 'Droid Sans'],
+                    ['key' => "'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans",'value' => 'PT Sans'],
+                    ['key' => "'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro",'value' => 'Source Sans Pro'],
+                    ['key' => "'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway",'value' => 'Raleway'],
+                    ['key' => "'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab",'value' => 'Josefin Slab'],
+                    ['key' => "'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto",'value' => 'Roboto'],
+                    ['key' => "'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif",'value' => 'Droid Serif'],
+                    ['key' => "'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald",'value' => 'Oswald'],
+                    ['key' => "'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato",'value' => 'Lato'],
+                    ['key' => "'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo",'value' => 'Arvo'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans"]
         ],
         /* Page */
-        'balsamine_page' => [
+        'heliotrope_page' => [
             'scope' => 'specified',
             'title' => 'Image du header',
             'name' => 'subheader',
             'type' => 'media',
             'position' => 0,
             'parent' => null,
-            'cf' => 'Balsamine Page',
+            'cf' => 'Heliotrope Page',
             'data' => [
                 'media_render_type' => 'object'
             ],
             'content' => [
-                'page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
-                'page@society-balsamine-list-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
-                'page@society-balsamine-single-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
-                'page@society-balsamine-team' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
-                'page@society-balsamine-gallery' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
-                'page@society-balsamine-contact' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-6.jpg',
+                'page@society-heliotrope-home' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg9.jpg',
+                'page@society-heliotrope-list-post' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
+                'page@society-heliotrope-single-post' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg2.jpg',
+                'page@society-heliotrope-price' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg3.jpg',
+                'page@society-heliotrope-gallery' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg4.jpg',
+                'page@society-heliotrope-contact' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg9.jpg',
             ]
         ],
         /* Homepage */
-        'balsamine_homepage_layout' => [
+        'heliotrope_homepage_header_text' => [
             'scope' => 'specified',
-            'title' => 'Modèle de thème pour la page d\'accueil',
-            'name' => 'homepage_model',
+            'title' => 'Texte du header',
+            'name' => 'homepage_header_text',
+            'type' => 'wysiwyg',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page',
+            'data' => [],
+            'content' => [
+                'page@society-heliotrope-home' => '<h1 class="text-theme-colored text-uppercase font-playfair font-weight-600 font-100 line-height-1 m-0">Men\'s</h1>
+                <h2 class="font-playfair font-48 text-white font-weight-400 m-0"> Hairstyle &amp; Fashion</h2>
+                <p class="text-white font-weight-200 font-18 mt-10">Every day we bring hope to millions of children in the world\'s <br>hardest places as a sign of God\'s unconditional love.</p>               
+             '
+            ]
+        ],
+        'heliotrope_homepage_header_text_align' => [
+            'scope' => 'specified',
+            'title' => 'Aligner le texte à',
+            'name' => 'homepage_header_text_align',
             'type' => 'select',
             'position' => 1,
             'parent' => null,
-            'cf' => 'Balsamine Home Page',
+            'cf' => 'Heliotrope Home Page',
             'data' => [
                 'contents' => [
-                    ['key' => 'static','value' => 'Statique'],
-                    ['key' => 'slider','value' => 'Slider'],
-                    ['key' => 'video','value' => 'Vidéo'],
+                    ['key' => 'left','value' => 'Gauche'],
+                    ['key' => 'center','value' => 'Centre'],
+                    ['key' => 'right','value' => 'Droite'],
                 ],
                 'multiple' => false
             ],
-            'content' => ['page@society-balsamine-home' => 'static']
+            'content' => ['page@society-heliotrope-home' => 'right']
         ],
-        'balsamine_homepage_1_background' => [
+        'heliotrope_homepage_about_us' => [
             'scope' => 'specified',
-            'title' => 'Image du background pour le modèle "Statique"',
-            'name' => 'homepage_1_background_image',
-            'type' => 'media',
+            'title' => 'Article',
+            'name' => 'homepage_about_us',
+            'type' => 'post',
+            'website' => 'Aster Website',
             'position' => 2,
             'parent' => null,
-            'cf' => 'Balsamine Home Page',
+            'cf' => 'Heliotrope Home Page',
             'data' => [
-                'media_render_type' => 'object'
+                'categories' => []
             ],
-            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
+            'content' => ['page@society-heliotrope-home' => 'heliotrope-about-us']
         ],
-        'balsamine_homepage_1_activities' => [
-            'scope' => 'specified',
-            'title' => 'Activités',
-            'name' => 'homepage_1_activities',
-            'type' => 'repeater',
-            'position' => 3,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-balsamine-home' => [0,1,2,3,4,5]
-            ]
-        ],
-        'balsamine_homepage_1_activity_title' => [
-            'scope' => 'specified',
-            'title' => 'Titre',
-            'name' => 'title',
-            'type' => 'string',
-            'position' => 0,
-            'parent' => 'balsamine_homepage_1_activities',
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => [
-                'page@society-balsamine-home' => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']
-            ]
-        ],
-        'balsamine_homepage_2' => [
-            'scope' => 'specified',
-            'title' => 'Configuration pour le modèle "Slider"',
-            'name' => 'homepage_2',
-            'type' => 'repeater',
-            'position' => 4,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-balsamine-home' => [0,1]
-            ]
-        ],
-        'balsamine_homepage_2_slider_image' => [
-            'scope' => 'specified',
-            'title' => 'Images du slider',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'balsamine_homepage_2',
-            'cf' => 'Balsamine Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-balsamine-home' => [
-                '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/images-slider/wide8.jpg'
-            ],
-            ]
-        ],
-        'balsamine_homepage_2_slider_title' => [
-            'scope' => 'specified',
-            'title' => 'Titre du slider',
-            'name' => 'title',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'balsamine_homepage_2',
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => [
-                'BEAUTY SALON',
-                'FROM HEAD TO TOE'
-            ],
-            ]
-        ],
-        'balsamine_homepage_2_slider_link' => [
-            'scope' => 'specified',
-            'title' => 'Lien du slider',
-            'name' => 'link',
-            'type' => 'string',
-            'position' => 2,
-            'parent' => 'balsamine_homepage_2',
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' =>
-                ['#',''],
-            ]
-        ],
-        'balsamine_homepage_3_background' => [
-            'scope' => 'specified',
-            'title' => 'Lien du vidéo de background pour le modèle "Vidéo"',
-            'name' => 'homepage_3_background_video',
-            'type' => 'string',
-            'position' => 5,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/video/salon_1.mp4']
-        ],
-        'balsamine_homepage_3_background_title' => [
-            'scope' => 'specified',
-            'title' => 'Titre pour le modèle "Vidéo"',
-            'name' => 'homepage_3_title',
-            'type' => 'string',
-            'position' => 6,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' =>'QUALITY & SERVICES']
-        ],
-        'balsamine_homepage_3_background_link' => [
-            'scope' => 'specified',
-            'title' => 'Lien pour le modèle "Vidéo"',
-            'name' => 'homepage_3_link',
-            'type' => 'string',
-            'position' => 7,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' =>'#']
-        ],
-        'balsamine_homepage_left_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Bloc de gauche',
-            'name' => 'left_top_bloc',
-            'type' => 'wysiwyg',
-            'position' => 8,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => '<h4>Special Promo</h4>
-                                    <p>Our commitment to quality and services ensure our clients happy. With years of
-                                        experiences and continuing education, our dedicated staff is ready to serve your
-                                        beauty needs. We\'re happy to help you decide the best look.</p>'
-            ]
-        ],
-        'balsamine_homepage_right_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Bloc de droite',
-            'name' => 'right_top_bloc',
-            'type' => 'wysiwyg',
-            'position' => 9,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => '<h4>Get Discount 50%</h4>
-                                    <p>Our commitment to quality and services ensure our clients happy. With years of
-                                        experiences and continuing education, our dedicated staff is ready to serve your
-                                        beauty needs. We\'re happy to help you decide the best look.</p>'
-            ]
-        ],
-        'balsamine_homepage_about_us_image' => [
-            'scope' => 'specified',
-            'title' => 'Image pour de gauche',
-            'name' => 'about_us_image',
-            'type' => 'media',
-            'position' => 10,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg']
-        ],
-        'balsamine_homepage_about_us' => [
-            'scope' => 'specified',
-            'title' => 'A propos de nous',
-            'name' => 'about_us',
-            'type' => 'wysiwyg',
-            'position' => 11,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => '<p>They were so friendly and it was pleasure to get my hair done there. I\'m very happy with
-                            services their provided. I will recommend this salon to my family and friends. Their
-                            pricing was competitive and their staff is professional.
-                            <span>Lynda, Customer</span>
-                        </p>'
-            ]
-        ],
-        'balsamine_homepage_actu_background' => [
-            'scope' => 'specified',
-            'title' => 'Image pour les actualités',
-            'name' => 'news_background',
-            'type' => 'media',
-            'position' => 12,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg']
-        ],
-        'balsamine_homepage_actu_text' => [
-            'scope' => 'specified',
-            'title' => 'Texte pour les actualités',
-            'name' => 'news_title',
-            'type' => 'string',
-            'position' => 13,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => 'Découvrez nos actualités']
-        ],
-        /* Team Page */
-        'balsamine_team' => [
+        'heliotrope_team' => [
             'scope' => 'specified',
             'title' => 'Equipes',
             'name' => 'teams',
             'type' => 'repeater',
-            'position' => 0,
+            'position' => 3,
             'parent' => null,
-            'cf' => 'Balsamine Team Page',
+            'cf' => 'Heliotrope Home Page',
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-balsamine-team' => [0,1,2,3]
+                'rows@page@society-heliotrope-home' => [0,1,2,3,4]
             ]
         ],
-        'balsamine_team_image' => [
+        'heliotrope_team_image' => [
             'scope' => 'specified',
             'title' => 'Image',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
-            'parent' => 'balsamine_team',
-            'cf' => 'Balsamine Team Page',
+            'parent' => 'heliotrope_team',
+            'cf' => 'Heliotrope Home Page',
             'data' => [
                 'media_render_type' => 'object'
             ],
-            'content' => ['page@society-balsamine-team' => [
-                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
+            'content' => ['page@society-heliotrope-home' => [
+                '/src/Themes/Heliotrope/Resources/public/img/team/1.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/2.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/3.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/4.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/5.png',
                 ]
             ]
         ],
-        'balsamine_team_name' => [
+        'heliotrope_team_name' => [
             'scope' => 'specified',
             'title' => 'Nom',
             'name' => 'name',
             'type' => 'string',
             'position' => 1,
-            'parent' => 'balsamine_team',
-            'cf' => 'Balsamine Team Page',
+            'parent' => 'heliotrope_team',
+            'cf' => 'Heliotrope Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-team' =>  ['Briana', 'Jessica', 'Rachel', 'Emma'],
+            'content' => ['page@society-heliotrope-home' =>  ['Briana', 'Jessica', 'Rachel', 'Emma', 'Delphine'],
             ]
         ],
-        'balsamine_team_description' => [
+        'heliotrope_team_description' => [
             'scope' => 'specified',
             'title' => 'Description',
             'name' => 'description',
-            'type' => 'textarea',
+            'type' => 'string',
             'position' => 2,
-            'parent' => 'balsamine_team',
-            'cf' => 'Balsamine Team Page',
+            'parent' => 'heliotrope_team',
+            'cf' => 'Heliotrope Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-team' => [
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                ]
+            'content' => ['page@society-heliotrope-home' => ['Hair Expert','Hair Expert','Hair Expert','Hair Expert','Hair Expert']
+            ]
+        ],
+        'heliotrope_homepage_partners' => [
+            'scope' => 'specified',
+            'title' => 'Partenaire',
+            'name' => 'partners',
+            'type' => 'repeater',
+            'position' => 4,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-home' => [0,1,2,3,4,5,6]
+            ]
+        ],
+        'heliotrope_homepage_partners_image' => [
+            'scope' => 'specified',
+            'title' => 'Images du slider',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'heliotrope_homepage_partners',
+            'cf' => 'Heliotrope Home Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-heliotrope-home' => [
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+            ],
             ]
         ],
         /* Gallery Page */
-        'balsamine_gallery_disposition' => [
+        'heliotrope_gallery_category' => [
             'scope' => 'specified',
-            'title' => 'Disposition de la galerie',
-            'name' => 'gallery_column',
-            'type' => 'select',
+            'title' => 'Catégories',
+            'name' => 'gallery_categories',
+            'type' => 'repeater',
             'position' => 0,
             'parent' => null,
-            'cf' => 'Balsamine Gallery Page',
-            'data' => [
-                'multiple' => false,
-                'contents' => [
-                    ['key' => '4', 'value' => '4 colonnes'],
-                    ['key' => '3', 'value' => '3 colonnes'],
-                    ['key' => '2', 'value' => '2 colonnes']
-                ]
-            ],
-            'content' => ['page@society-balsamine-gallery' => '4',]
+            'cf' => 'Heliotrope Gallery Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-gallery' => [0,1,2]
+            ]
         ],
-        'balsamine_gallery' => [
+        'heliotrope_gallery_category_title' => [
+            'scope' => 'specified',
+            'title' => 'Titre',
+            'name' => 'title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'heliotrope_gallery_category',
+            'cf' => 'Heliotrope Gallery Page',
+            'data' => [],
+            'content' => [
+                'page@society-heliotrope-gallery' => ['Branding','Design','Photography']
+            ]
+        ],
+        'heliotrope_gallery' => [
             'scope' => 'specified',
             'title' => 'Galerie',
             'name' => 'galleries',
             'type' => 'repeater',
             'position' => 1,
             'parent' => null,
-            'cf' => 'Balsamine Gallery Page',
+            'cf' => 'Heliotrope Gallery Page',
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-balsamine-gallery' => [0,1,2,3,4,5,6,7]
+                'rows@page@society-heliotrope-gallery' => [0,1,2,3,4,5,6]
             ]
         ],
-        'balsamine_gallery_image' => [
+        'heliotrope_gallery_image' => [
             'scope' => 'specified',
             'title' => 'Image',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
-            'parent' => 'balsamine_gallery',
-            'cf' => 'Balsamine Gallery Page',
+            'parent' => 'heliotrope_gallery',
+            'cf' => 'Heliotrope Gallery Page',
             'data' => [
                 'media_render_type' => 'object'
             ],
-            'content' => ['page@society-balsamine-gallery' => [
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_1.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_2.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_3.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_4.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_5.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_6.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_7.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_8.jpg',
+            'content' => ['page@society-heliotrope-gallery' => [
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/h2.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/3.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/4.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/5.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/6.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/portfolio/7.jpg',
+            ]
+            ]
+        ],
+        'heliotrope_gallery_cat' => [
+            'scope' => 'specified',
+            'title' => 'Catégorie',
+            'name' => 'category',
+            'type' => 'string',
+            'position' => 1,
+            'parent' => 'heliotrope_gallery',
+            'cf' => 'Heliotrope Gallery Page',
+            'data' => [],
+            'content' => ['page@society-heliotrope-gallery' => ['Photography','Branding','Design', 'Branding','Photography','Design', 'Branding']
+            ]
+        ],
+        /* Price page*/
+        'heliotrope_price' => [
+            'scope' => 'specified',
+            'title' => 'Catégories',
+            'name' => 'categories',
+            'type' => 'repeater',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Price Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-price' => [0,1,2]
+            ]
+        ],
+        'heliotrope_price_cat' => [
+            'scope' => 'specified',
+            'title' => 'Titre',
+            'name' => 'title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'heliotrope_price',
+            'cf' => 'Heliotrope Price Page',
+            'data' => [],
+            'content' => ['page@society-heliotrope-price' => ['Femme','Homme','Enfant']]
+        ],
+        'heliotrope_price_list' => [
+            'scope' => 'specified',
+            'title' => 'Services',
+            'name' => 'services',
+            'type' => 'repeater',
+            'position' => 1,
+            'parent' => 'heliotrope_price',
+            'cf' => 'Heliotrope Price Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-price' => [
+                    0 => [0,1,2,3,4,5],
+                    1 => [0,1,2],
+                    2 => [0,1,2]
                 ]
             ]
-        ]
+        ],
+        'heliotrope_price_list_title' => [
+            'scope' => 'specified',
+            'title' => 'Titre',
+            'name' => 'title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'heliotrope_price_list',
+            'cf' => 'Heliotrope Price Page',
+            'data' => [],
+            'content' => ['page@society-heliotrope-price' =>
+                [
+                    ['WOMAN\'S HAIRCUT','WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT'],
+                    ['MAN\'S HAIRCUT','MAN\'S HAIRCUT', 'MAN\'S HAIRCUT'],
+                    ['CHILD\'S HAIRCUT','CHILD\'S HAIRCUT', 'CHILD\'S HAIRCUT'],
+                ]
+            ]
+        ],
+        'heliotrope_price_list_image' => [
+            'scope' => 'specified',
+            'title' => 'Image',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 1,
+            'parent' => 'heliotrope_price_list',
+            'cf' => 'Heliotrope Price Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-heliotrope-price' =>
+                [
+                    [
+                        '/src/Themes/Heliotrope/Resources/public/img/pricing/s1.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/pricing/s2.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/pricing/s3.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/pricing/s4.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/pricing/s2.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/pricing/s1.jpg',
+                    ],
+                    [
+                        '/src/Themes/Heliotrope/Resources/public/img/gallery/m1.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/gallery/m2.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/gallery/m3.jpg',
+                    ],
+                    [
+                        '/src/Themes/Heliotrope/Resources/public/img/products/1.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/products/1.jpg',
+                        '/src/Themes/Heliotrope/Resources/public/img/products/1.jpg',
+                    ],
+                ]
+            ]
+        ],
+        'heliotrope_price_list_price' => [
+            'scope' => 'specified',
+            'title' => 'Prix',
+            'name' => 'price',
+            'type' => 'string',
+            'position' => 2,
+            'parent' => 'heliotrope_price_list',
+            'cf' => 'Heliotrope Price Page',
+            'data' => [],
+            'content' => ['page@society-heliotrope-price' =>
+                [
+                    ['80€','45€', '75€', '55€', '100€', '60€'],
+                    ['20€','35€', '40€'],
+                    ['8€','12€', '15€'],
+                ]
+            ]
+        ],
+        'heliotrope_price_list_description' => [
+            'scope' => 'specified',
+            'title' => 'Description',
+            'name' => 'description',
+            'type' => 'textarea',
+            'position' => 3,
+            'parent' => 'heliotrope_price_list',
+            'cf' => 'Heliotrope Price Page',
+            'data' => [],
+            'content' => ['page@society-heliotrope-price' =>
+                [
+                    [
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?'],
+                    [
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?'
+                    ],
+                    [
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at, dicta quasi officia cupiditate enim, consequatur?',
+                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti animi voluptatibus quaerat at'
+                    ],
+                ]
+            ]
+        ],
     ];
 
     public function load(ObjectManager $manager)
@@ -530,10 +643,10 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
     function getDependencies()
     {
         return [
-            'Jet\Themes\Balsamine\Fixtures\LoadMedia',
-            'Jet\Themes\Balsamine\Fixtures\LoadPage',
-            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
-            'Jet\Themes\Balsamine\Fixtures\LoadCustomField'
+            'Jet\Themes\Heliotrope\Fixtures\LoadMedia',
+            'Jet\Themes\Heliotrope\Fixtures\LoadPage',
+            'Jet\Themes\Heliotrope\Fixtures\LoadWebsite',
+            'Jet\Themes\Heliotrope\Fixtures\LoadCustomField'
         ];
     }
 }

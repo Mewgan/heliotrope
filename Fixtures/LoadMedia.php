@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
@@ -12,356 +12,341 @@ class LoadMedia extends AbstractFixture
 
     protected $data = [
         [
-            'title' => 'Theme balsamine thumbnail',
-            'path' => '/public/media/thumbnail/theme-balsamine-thumbnail.png',
+            'title' => 'Theme heliotrope thumbnail',
+            'path' => '/public/media/thumbnail/theme-heliotrope-thumbnail.png',
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,
-            'alt' => 'Theme aster thumbnail'
+            'alt' => 'Theme heliotrope thumbnail'
         ],
         [
-            'title' => 'Logo theme balsamine',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/logo.png',
+            'title' => 'Logo theme heliotrope',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
             'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Logo aster'
+            'alt' => 'Logo heliotrope'
         ],
         [
-            'title' => 'Logo light theme balsamine',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png',
+            'title' => 'Background image 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background image 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background image 3',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background image 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background image 9',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg9.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Service 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Service 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Service 3',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Service 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Service 5',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/5.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],[
+            'title' => 'Service 6',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/6.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Service 7',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/7.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Service 8',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/services/8.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Service image'
+        ],
+        [
+            'title' => 'Actualité 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/blog/1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Actualité image'
+        ],
+        [
+            'title' => 'Actualité 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/blog/2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Actualité image'
+        ],
+        [
+            'title' => 'Actualité 3',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/blog/3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Actualité image'
+        ],
+        [
+            'title' => 'Actualité 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/blog/4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Actualité image'
+        ],
+        [
+            'title' => 'Actualité 5',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/blog/5.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Actualité image'
+        ],
+        [
+            'title' => 'Actualité 6',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/blog/6.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Actualité image'
+        ],
+        [
+            'title' => 'Equipe 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/team/1.png',
             'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Logo aster'
+            'alt' => 'Equipe image'
         ],
         [
-            'title' => 'Background video image',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/video-poster.jpg',
-            'type' => 'image/jpg',
+            'title' => 'Equipe 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/team/2.png',
+            'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background video image'
+            'alt' => 'Equipe image'
         ],
         [
-            'title' => 'Subheader 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
-            'type' => 'image/jpg',
+            'title' => 'Equipe 3',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/team/3.png',
+            'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Subheader'
+            'alt' => 'Equipe image'
         ],
         [
-            'title' => 'Subheader 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
-            'type' => 'image/jpg',
+            'title' => 'Equipe 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/team/4.png',
+            'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Subheader'
+            'alt' => 'Equipe image'
         ],
         [
-            'title' => 'Subheader 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
-            'type' => 'image/jpg',
+            'title' => 'Equipe 5',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/team/5.png',
+            'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Subheader'
+            'alt' => 'Equipe image'
         ],
         [
-            'title' => 'Subheader 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
+            'title' => 'Partenaire',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Subheader'
+            'alt' => 'Image partenaire'
         ],
         [
-            'title' => 'Subheader 5',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
+            'title' => 'Gallerie 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/1.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Subheader'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Subheader 6',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-6.jpg',
+            'title' => 'Gallerie 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/h2.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Subheader'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Slider 7',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
+            'title' => 'Gallerie 3',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/3.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Slider image'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Slider 8',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/images-slider/wide8.jpg',
+            'title' => 'Gallerie 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/4.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Slider image'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Background 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-1.jpg',
+            'title' => 'Gallerie 5',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/5.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Background 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-3.jpg',
+            'title' => 'Gallerie 6',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/6.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Background 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-4.jpg',
+            'title' => 'Gallerie 7',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/portfolio/7.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Gallerie'
         ],
         [
-            'title' => 'Background 5',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-5.jpg',
+            'title' => 'Tarif 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/pricing/s1.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'Background 7',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg',
+            'title' => 'Tarif 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/pricing/s2.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'Background 8',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-8.jpg',
+            'title' => 'Tarif 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/pricing/s3.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'Background 9',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-9.jpg',
+            'title' => 'Tarif 4',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/pricing/s4.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'Background 10',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg',
+            'title' => 'Tarif Homme 1',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/gallery/m1.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'Background 11',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-11.jpg',
+            'title' => 'Tarif Homme 2',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/gallery/m2.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Background image'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'About us',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg',
+            'title' => 'Tarif Homme 3',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/gallery/m3.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'About us'
+            'alt' => 'Tarif'
         ],
         [
-            'title' => 'Balsamine service 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-1.jpg',
+            'title' => 'Tarif Enfant',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/products/1.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Balsamine service'
+            'alt' => 'Tarif'
         ],
-        [
-            'title' => 'Balsamine service 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-2.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine service'
-        ],
-        [
-            'title' => 'Balsamine service 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-3.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine service'
-        ], [
-            'title' => 'Balsamine service 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-4.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine service'
-        ],
-        [
-            'title' => 'Balsamine service 5',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-5.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine service'
-        ],
-        [
-            'title' => 'Balsamine service 6',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-6.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine service'
-        ],
-        [
-            'title' => 'Balsamine actu 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-1.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine actu'
-        ],
-        [
-            'title' => 'Balsamine actu 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-2.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine actu'
-        ],
-        [
-            'title' => 'Balsamine actu 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-3.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine actu'
-        ],
-        [
-            'title' => 'Balsamine actu 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-4.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine actu'
-        ],
-        [
-            'title' => 'Balsamine team 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine equipe'
-        ],
-        [
-            'title' => 'Balsamine team 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine equipe'
-        ],
-        [
-            'title' => 'Balsamine team 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine equipe'
-        ],
-        [
-            'title' => 'Balsamine team 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine equipe'
-        ],
-        [
-            'title' => 'Balsamine gallery 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_1.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_2.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_3.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_4.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 5',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_5.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 6',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_6.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 7',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_7.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
-        [
-            'title' => 'Balsamine gallery 8',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_8.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Balsamine gallery'
-        ],
+
     ];
     
     public function load(ObjectManager $manager)

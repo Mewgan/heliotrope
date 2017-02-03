@@ -1,7 +1,6 @@
-<section>
-    <div class="container">
+<div class="container">
+    <div class="section-content">
         <div class="row">
-
             {% for post in posts %}
                 {% set params = {} %}
                 {% for arg in args %}
@@ -15,27 +14,43 @@
                         {% endif %}
                     {% endif %}
                 {% endfor %}
-                <div class="col-md-4 col-sm-6 col-xs-6 text-center">
-                    <div class="picframe">
-                        <a href="{{ link(route,params) }}">
-                            <span class="overlay {% if data.route_params.slug != 'actualite' %}img-circle{% endif %}">
-                                <span class="pf_text">
-                                    <span class="project-name">Voir plus</span>
-                                </span>
-                            </span>
-                        </a>
-
-                        <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload {% if data.route_params.slug != 'actualite' %}img-circle{% endif %}" alt="{{ post.thumbnail.alt }}" />
+                {% if data.route_params.slug == 'actualite' %}
+                    <div class="col-md-3 wow fadeInUp mt-30 mb-30" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <article class="post clearfix maxwidth600 mb-sm-30">
+                            <div class="entry-header">
+                                <div class="post-thumb thumb"> <img class="img-responsive img-fullwidth" alt="{{ post.thumbnail.alt }}" src="{{ img(post.thumbnail.path) }}"> </div>
+                            </div>
+                            <div class="entry-content border-1px p-20">
+                                <h5 class="entry-title mt-0 pt-0 text-uppercase letter-space-2"><a href="{{ link(route,params) }}">{{ post.title }}</a></h5>
+                                <p class="text-left mb-20 mt-15 font-13">{{ post.description }}</p>
+                                <a href="{{ link(route,params) }}" class="btn btn-flat btn-dark btn-theme-colored btn-sm pull-left">Voir plus</a>
+                                <ul class="list-inline entry-date pull-right font-12 mt-5">
+                                    <li> {{ post.updated_at | date("d/m/Y") }}</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </article>
                     </div>
-
-                    <div class="spacer-single"></div>
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <div class="spacer-half"></div>
-                </div>
+                    {% if loop.index is divisible by(4) %}
+                        <div class="clearfix"></div>
+                    {% endif %}
+                {% else %}
+                    <div class="col-md-4 mb-sm-40 mt-30 mb-30">
+                        <div class="thumb border-effect">
+                            <img alt="{{ post.thumbnail.alt }}" src="{{ img(post.thumbnail.path) }}" class="img-fullwidth">
+                        </div>
+                        <div data-margin-top="-30px" class="relative z-index1" style="margin-top: -30px;">
+                            <h4 class="text-uppercase letter-space-3 bg-black  font-weight-400 pl-20 pr-20 pt-5 pb-5 display-inline mb-10">
+                                <a class="text-white" href="{{ link(route,params) }}">{{ post.title }}</a>
+                            </h4>
+                        </div>
+                        <p>{{ post.description }}</p>
+                    </div>
+                    {% if loop.index is divisible by(3) %}
+                        <div class="clearfix"></div>
+                    {% endif %}
+                {% endif %}
             {% endfor %}
-
-            <div class="clearfix"></div>
         </div>
     </div>
-</section>
+</div>

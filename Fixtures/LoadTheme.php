@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -14,9 +14,9 @@ class LoadTheme extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         [
-            'name' => 'Balsamine',
+            'name' => 'Heliotrope',
             'profession' => 'barber',
-            'thumbnail' => '/public/media/thumbnail/theme-balsamine-thumbnail.png',
+            'thumbnail' => '/public/media/thumbnail/theme-heliotrope-thumbnail.png',
             'state' => 1,
         ]
     ];
@@ -36,7 +36,7 @@ class LoadTheme extends AbstractFixture implements DependentFixtureInterface
     {
         return [
             'Jet\DataFixtures\LoadProfession',
-            'Jet\Themes\Balsamine\Fixtures\LoadMedia'
+            'Jet\Themes\Heliotrope\Fixtures\LoadMedia'
         ];
     }
 }

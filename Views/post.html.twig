@@ -1,22 +1,22 @@
-{% block css %}
-    <style>
-        .side-bg .background-image{
-            background: url({{ img(post.thumbnail.path) }}) top;
-        }
-    </style>
-{% endblock %}
-
-<section aria-label="services-hair" class="side-bg">
-    <div class="col-md-6 image-container">
-        <div class="background-image"></div>
-    </div>
-
+<section id="about">
     <div class="container">
-        <div class="row">
-            <div class="col-md-5 col-md-offset-7">
-                <h2>{{ post.title }}</h2>
-                {{ post.content|raw }}
+        <div class="section-content">
+            <div class="row mt-50">
+                <div class="col-md-5">
+                    <div class="class-item box-hover-effect effect1">
+                        <div class="thumb"> <a href="page-services-details.html#">
+                                <img class="img-responsive img-fullwidth mb-20" src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 mt-20">
+                    <div class="caption">
+                        <h4 class="text-uppercase letter-space-3">{{ post.title }}</h4>
+                        {{ post.content|raw }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+

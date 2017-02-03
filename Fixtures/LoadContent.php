@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -17,35 +17,35 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
     use LoadNavigationFixture;
 
     protected $data = [
-        /* Balsamine website navigation module content */
-        'balsamine_navigation_content' => [
+        /* Heliotrope website navigation module content */
+        'heliotrope_navigation_content' => [
             'cat_mod' => 'navigation',
             'name' => 'Menu',
             'block' => 'navigation',
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
             'module' => 'module_simple_menu',
-            'template' => 'balsamine_navigation_partial',
+            'template' => 'heliotrope_navigation_partial',
             'section' => null,
             'page' => null,
             'data' => [
                 'class' => '',
-                'navigation' => 'balsamine-menu'
+                'navigation' => 'heliotrope-menu'
             ]
         ],
-        /* Balsamine website post module content */
-        'balsamine_list_home_service_content' => [
+        /* heliotrope website post module content */
+        'heliotrope_list_home_service_content' => [
             'cat_mod' => 'post',
             'name' => 'Liste de services',
             'block' => 'list_home_service',
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
             'module' => 'module_post_list',
-            'template' => 'balsamine_home_list_service_partial',
+            'template' => 'heliotrope_home_list_service_partial',
             'section' => null,
-            'page' => 'society-balsamine-home',
+            'page' => 'society-heliotrope-home',
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
-                'total_row' => 6,
+                'total_row' => 2,
                 'db' => [
                     [
                         'alias' => 'c',
@@ -67,15 +67,15 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
-        'balsamine_list_home_news_content' => [
+        'heliotrope_list_home_news_content' => [
             'cat_mod' => 'post',
             'name' => 'Liste d\'actualités',
             'block' => 'list_home_news',
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
             'module' => 'module_post_list',
-            'template' => 'balsamine_home_list_news_partial',
+            'template' => 'heliotrope_home_list_news_partial',
             'section' => null,
-            'page' => 'society-balsamine-home',
+            'page' => 'society-heliotrope-home',
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
@@ -101,15 +101,15 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
-        'balsamine_list_post_content' => [
+        'heliotrope_list_post_content' => [
             'cat_mod' => 'post',
             'name' => 'Liste d\'articles',
             'block' => 'list_post',
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
             'module' => 'module_post_list',
-            'template' => 'balsamine_post_list_partial',
+            'template' => 'heliotrope_post_list_partial',
             'section' => null,
-            'page' => 'society-balsamine-list-post',
+            'page' => 'society-heliotrope-list-post',
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
@@ -135,15 +135,15 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
-        'balsamine_single_post_content' => [
+        'heliotrope_single_post_content' => [
             'cat_mod' => 'post',
             'name' => 'Article',
             'block' => 'single_post',
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
             'module' => 'module_single_post',
-            'template' => 'balsamine_single_post_partial',
+            'template' => 'heliotrope_single_post_partial',
             'section' => null,
-            'page' => 'society-balsamine-single-post',
+            'page' => 'society-heliotrope-single-post',
             'data' => [
                 'class' => '',
                 'db' => [
@@ -176,11 +176,11 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
     {
         return [
             'Jet\DataFixtures\LoadSection',
-            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
-            'Jet\Themes\Balsamine\Fixtures\LoadPage',
-            'Jet\Themes\Balsamine\Fixtures\LoadPost',
-            'Jet\Themes\Balsamine\Fixtures\LoadNavigation',
-            'Jet\Themes\Balsamine\Fixtures\LoadTemplate',
+            'Jet\Themes\Heliotrope\Fixtures\LoadWebsite',
+            'Jet\Themes\Heliotrope\Fixtures\LoadPage',
+            'Jet\Themes\Heliotrope\Fixtures\LoadPost',
+            'Jet\Themes\Heliotrope\Fixtures\LoadNavigation',
+            'Jet\Themes\Heliotrope\Fixtures\LoadTemplate',
             'Jet\Modules\Post\Fixtures\LoadPostModule',
             'Jet\Modules\Navigation\Fixtures\LoadNavigationModule',
         ];

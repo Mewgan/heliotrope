@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
@@ -13,11 +13,11 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
     use LoadFixture;
 
     protected $data = [
-        'balsamine' => [
+        'heliotrope' => [
             'address' => '17 Rue Portefoin',
             'city' => 'Paris 3',
             'postal_code' => '75003',
-            'society' => 'Balsamine Society',
+            'society' => 'Heliotrope Society',
             'country' => 'FRANCE',
         ]
     ];
@@ -39,7 +39,7 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
     function getDependencies()
     {
         return [
-            'Jet\Themes\Balsamine\Fixtures\LoadSociety'
+            'Jet\Themes\Heliotrope\Fixtures\LoadSociety'
         ];
     }
 }

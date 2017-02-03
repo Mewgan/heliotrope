@@ -1,60 +1,54 @@
+<!-- Section: blog -->
+<section id="blog">
+    <div class="container pt-40 pb-30">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-uppercase title line-bottom">Latest <span
+                                class="text-black font-weight-300">News</span></h3>
+                    <div class="owl-carousel-2col owl-nav-top" data-nav="true">
+                        {% for post in posts %}
+                            {% set params = {} %}
+                            {% for arg in args %}
+                                {% if arg.value != '' %}
+                                    {% set params = params|merge({(arg.route):arg.value}) %}
+                                {% else %}
+                                    {% if arg.alias == 'p' %}
+                                        {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
+                                    {% elseif arg.alias == 'c' %}
+                                        {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
 
-<!-- section begin -->
-<section id="section-hero-2" aria-label="section-hero-2" data-stellar-background-ratio=".2" data-bgcolor="#333"
-         class="text-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 mt60 mb20 text-center">
-                <h4 class="mb30 font48">{{ field_render('news_title', 'page@'~data.page.id) }}</h4>
-                <div class="small-border wow zoomIn"></div>
+                            <div class="item">
+                                <article class="post clearfix mb-30 bg-lighter">
+                                    <div class="entry-header">
+                                        <div class="post-thumb thumb">
+                                            <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}"
+                                                 class="img-responsive img-fullwidth">
+                                        </div>
+                                    </div>
+                                    <div class="entry-content p-15 pt-10 pb-10">
+                                        <div class="entry-meta media no-bg no-border mt-0 mb-10">
+                                            <div class="media-body pl-0">
+                                                <div class="event-content pull-left flip">
+                                                    <h4 class="entry-title text-white text-uppercase font-weight-400 m-0 mt-5">
+                                                        <a href="{{ link(route,params) }}">{{ post.title }}</a></h4>
+                                                    <span class="mb-10 text-gray-darkgray mr-10 font-13">{{ post.updated_at | date("d FY") }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-5">{{ post.description }}<a
+                                                    class="text-theme-color-2 font-12 ml-5"
+                                                    href="{{ link(route,params) }}"> Voir plus</a></p>
+                                    </div>
+                                </article>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- section close -->
-
-<!-- section begin -->
-<section id="section-blog" class="no-top">
-    <div class="container">
-        <div class="row">
-
-            <div class="clearfix"></div>
-
-            <ul id="blog-carousel" class="blog-list blog-snippet wow fadeInUp mt-60">
-                {% for post in posts %}
-                    {% set params = {} %}
-                    {% for arg in args %}
-                        {% if arg.value != '' %}
-                            {% set params = params|merge({(arg.route):arg.value}) %}
-                        {% else %}
-                            {% if arg.alias == 'p' %}
-                                {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
-                            {% elseif arg.alias == 'c' %}
-                                {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                    <li class="col-md-6 item">
-                        <div class="post-content">
-                            <div class="post-image">
-                                <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload" alt="{{ post.thumbnail.alt }}"/>
-                            </div>
-
-                            <div class="date-box">
-                                <div class="day">{{ post.updated_at | date("d") }}</div>
-                                <div class="month">{{ post.updated_at | date("M") }}</div>
-                            </div>
-
-                            <div class="post-text">
-                                <h3><a href="{{ link(route,params) }}">{{ post.title }}</a></h3>
-                                <p>{{ post.description }}</p>
-                            </div>
-
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</section>
-<!-- section close -->

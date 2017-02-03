@@ -1,87 +1,87 @@
 {% extends template_from_string(data.website_layout) %}
 
 {% block css %}
-    <style>
-        #subheader{
-            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
-        }
-    </style>
+
 {% endblock %}
 
 {% block page %}
 
-    <!-- subheader -->
-    <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>{{ data.page.title }}</h1>
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{{ img(field_render('subheader', 'page@'~data.page.id).path) }}">
+        <div class="container pt-100 pb-50">
+            <!-- Section Content -->
+            <div class="section-content pt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title text-white">
+                            {% if data.page.type == 'dynamic' %}
+                                {{ data.route_params.slug | capitalize | replace({'-':' '}) }}
+                            {% else %}
+                                {{ data.page.title }}
+                            {% endif %}
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- subheader close -->
 
-    <!-- content begin -->
-    <div id="content" class="no-top">
 
-        <!-- section begin -->
-        <section id="section-map" aria-label="section-map" class="no-top">
-            <div id="gmap" style="height:400px;"></div>
-        </section>
-        <!-- section close -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2>Contact</h2>
-                    <div class="small-border wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
-                </div>
-
-                <div class="col-md-8 col-md-offset-2">
-                    <form name="contactForm" id='contact_form' class="deform-1" method="post" action='http://www.themenesia.com/themeforest/modis-new/email.php'>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div id='name_error' class='error'>Please enter your name.</div>
-                                <div>
-                                    <input type='text' name='name' id='name' class="form-control" placeholder="Your Name">
-                                </div>
-
-                                <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
-                                <div>
-                                    <input type='text' name='email' id='email' class="form-control" placeholder="Your Email">
-                                </div>
-
-                                <div id='phone_error' class='error'>Please enter your phone number.</div>
-                                <div>
-                                    <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div id='message_error' class='error'>Please enter your message.</div>
-                                <div>
-                                    <textarea name='message' id='message' class="form-control" placeholder="Your Message"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 text-center">
-                                <p id='submit'>
-                                    <input type='submit' id='send_message' value='Submit Form' class="btn btn-custom">
-                                </p>
-                                <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
-                            </div>
+    <!-- Section: Have Any Question -->
+    <section class="divider">
+        <div class="container pt-60 pb-60">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="contact-info text-center">
+                            <i class="fa fa-phone font-36 mb-10 text-theme-colored"></i>
+                            <h4>Nous appeler</h4>
+                            <h6 class="text-gray">Tél: {{ account.phone }}</h6>
                         </div>
-                    </form>
-
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="contact-info text-center">
+                            <i class="fa fa-map-marker font-36 mb-10 text-theme-colored"></i>
+                            <h4>Adresse</h4>
+                            <h6 class="text-gray">{{ address.address }}<br/> {{ address.postal_code }} {{ address.city }}<br/> {{ address.country }}</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="contact-info text-center">
+                            <i class="fa fa-envelope font-36 mb-10 text-theme-colored"></i>
+                            <h4>E-mail</h4>
+                            <h6 class="text-gray">{{ account.email }}</h6>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
-    </div>
-    <!-- content begin -->
+    </section>
 
+    <!--======= Section Map ===== -->
+    <section>
+        <div class="container-fluid pt-0">
+            <div class="row">
+                <div id="gmap" style="height:400px"></div>
+            </div>
+        </div>
+    </section>
+    <!-- end main-content -->
+
+    <section class="bg-theme-colored">
+        <div class="container pt-30 pb-30">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-400 text-white font-raleway letter-space-2">Not every woman has time to go to a salon and have her hair blow-dried every day.</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-dark mt-30 p-10 pl-20 pr-20 text-white btn-flat no-border" data-toggle="modal" data-target="#BSParentModal" href="{{ booking_link }}" class="bs-modal-ajax-load" >Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block js %}

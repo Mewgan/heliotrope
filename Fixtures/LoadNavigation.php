@@ -1,5 +1,5 @@
 <?php
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -12,9 +12,9 @@ class LoadNavigation extends AbstractFixture implements DependentFixtureInterfac
     use LoadNavigationFixture;
     
     protected $data = [
-        'balsamine-menu' => [
+        'heliotrope-menu' => [
             'name' => 'Menu',
-            'website' => 'balsamine-society'
+            'website' => 'heliotrope-society'
         ]
     ];
 
@@ -32,7 +32,7 @@ class LoadNavigation extends AbstractFixture implements DependentFixtureInterfac
     function getDependencies()
     {
         return [
-            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
+            'Jet\Themes\Heliotrope\Fixtures\LoadWebsite',
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
@@ -11,91 +11,91 @@ class LoadTemplate extends AbstractFixture
     use LoadFixture;
 
     protected $data = [
-        /* Aster templates */
-        'balsamine_layout' => [
-            'name' => 'ThemeBalsamineFileLayout',
-            'title' => 'Theme Balsamine Template',
-            'content' => 'Balsamine/Views/layout',
+        /* Heliotrope templates */
+        'heliotrope_layout' => [
+            'name' => 'ThemeHeliotropeFileLayout',
+            'title' => 'Theme Heliotrope Template',
+            'content' => 'Heliotrope/Views/layout',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_simple_home_page_layout' => [
-            'name' => 'ThemeBalsamineHomePageFileLayout',
-            'title' => 'Theme Balsamine Home Page Template',
-            'content' => 'Balsamine/Views/index',
+        'heliotrope_home_page_layout' => [
+            'name' => 'ThemeHeliotropeHomePageFileLayout',
+            'title' => 'Theme Heliotrope Home Page Template',
+            'content' => 'Heliotrope/Views/index',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_page_layout' => [
-            'name' => 'ThemeBalsaminePageFileLayout',
-            'title' => 'Theme Balsamine Page Template',
-            'content' => 'Balsamine/Views/page',
+        'heliotrope_page_layout' => [
+            'name' => 'ThemeHeliotropePageFileLayout',
+            'title' => 'Theme Heliotrope Page Template',
+            'content' => 'Heliotrope/Views/page',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_navigation_partial' => [
-            'name' => 'ThemeBalsamineNavigationFilePartial',
-            'title' => 'Theme Balsamine Navigation Template',
-            'content' => 'Balsamine/Views/navigation',
+        'heliotrope_navigation_partial' => [
+            'name' => 'ThemeHeliotropeNavigationFilePartial',
+            'title' => 'Theme Heliotrope Navigation Template',
+            'content' => 'Heliotrope/Views/navigation',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_post_list_partial' => [
-            'name' => 'ThemeBalsaminePostListFilePartial',
-            'title' => 'Theme Balsamine Post List Template',
-            'content' => 'Balsamine/Views/post_list',
+        'heliotrope_post_list_partial' => [
+            'name' => 'ThemeHeliotropePostListFilePartial',
+            'title' => 'Theme Heliotrope Post List Template',
+            'content' => 'Heliotrope/Views/post_list',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_single_post_partial' => [
-            'name' => 'ThemeBalsaminePostFilePartial',
-            'title' => 'Theme Balsamine Post Template',
-            'content' => 'Balsamine/Views/post',
+        'heliotrope_single_post_partial' => [
+            'name' => 'ThemeHeliotropePostFilePartial',
+            'title' => 'Theme Heliotrope Post Template',
+            'content' => 'Heliotrope/Views/post',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_home_list_service_partial' => [
-            'name' => 'ThemeBalsamineHomeServiceListFilePartial',
-            'title' => 'Theme Balsamine Home Service List Template',
-            'content' => 'Balsamine/Views/home_list_service',
+        'heliotrope_home_list_service_partial' => [
+            'name' => 'ThemeHeliotropeHomeServiceListFilePartial',
+            'title' => 'Theme Heliotrope Home Service List Template',
+            'content' => 'Heliotrope/Views/home_list_service',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_home_list_news_partial' => [
-            'name' => 'ThemeBalsamineHomeNewsListFilePartial',
-            'title' => 'Theme Balsamine Home News List Template',
-            'content' => 'Balsamine/Views/home_list_news',
+        'heliotrope_home_list_news_partial' => [
+            'name' => 'ThemeHeliotropeHomeNewsListFilePartial',
+            'title' => 'Theme Heliotrope Home News List Template',
+            'content' => 'Heliotrope/Views/home_list_news',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_team_layout' => [
-            'name' => 'ThemeBalsamineTeamFileLayout',
-            'title' => 'Theme Balsamine Team Template',
-            'content' => 'Balsamine/Views/team_list',
+        'heliotrope_price_layout' => [
+            'name' => 'ThemeHeliotropePriceFileLayout',
+            'title' => 'Theme Heliotrope Price Template',
+            'content' => 'Heliotrope/Views/price_list',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_gallery_layout' => [
-            'name' => 'ThemeBalsamineGalleryFileLayout',
-            'title' => 'Theme Balsamine Gallery Template',
-            'content' => 'Balsamine/Views/gallery',
+        'heliotrope_gallery_layout' => [
+            'name' => 'ThemeHeliotropeGalleryFileLayout',
+            'title' => 'Theme Heliotrope Gallery Template',
+            'content' => 'Heliotrope/Views/gallery',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_contact_layout' => [
-            'name' => 'ThemeBalsamineContactFileLayout',
-            'title' => 'Theme Balsamine Contact Template',
-            'content' => 'Balsamine/Views/contact',
+        'heliotrope_contact_layout' => [
+            'name' => 'ThemeHeliotropeContactFileLayout',
+            'title' => 'Theme Heliotrope Contact Template',
+            'content' => 'Heliotrope/Views/contact',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'

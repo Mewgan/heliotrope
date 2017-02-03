@@ -1,5 +1,5 @@
 <?php
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -13,12 +13,12 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         [
-            'name' => 'Balsamine Society',
+            'name' => 'Heliotrope Society',
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
-            'name' => 'Zoro Society',
-            'account' => 'zoro@onepiece.com'
+            'name' => 'Sanji Society',
+            'account' => 'sanji@onepiece.com'
         ]
     ];
 

@@ -1,5 +1,5 @@
 <?php
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -22,19 +22,19 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
     protected $data = [
         [
             'title' => 'Accueil',
-            'navigation' => 'balsamine-menu',
+            'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
             'url' => '/',
             'route' => null,
             'type' => 'page',
-            'type_id' => 'society-balsamine-home',
+            'type_id' => 'society-heliotrope-home',
             'position' => 0,
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
         ],
         [
             'title' => 'Services',
-            'navigation' => 'balsamine-menu',
+            'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
             'url' => '/articles/service',
@@ -42,35 +42,35 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
             'type' => 'post_category',
             'type_id' => 'service',
             'position' => 1,
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
         ],
         [
-            'title' => 'Équipe',
-            'navigation' => 'balsamine-menu',
+            'title' => 'Tarifs',
+            'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
-            'url' => '/equipe',
-            'route' => 'module:team.type:static.action:all',
+            'url' => '/tarif',
+            'route' => 'module:price.type:static.action:all',
             'type' => 'page',
-            'type_id' => 'society-balsamine-team',
+            'type_id' => 'society-heliotrope-price',
             'position' => 2,
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
         ],
         [
             'title' => 'Galerie',
-            'navigation' => 'balsamine-menu',
+            'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
             'url' => '/galerie',
             'route' => 'module:gallery.type:static.action:all',
             'type' => 'page',
-            'type_id' => 'society-balsamine-gallery',
+            'type_id' => 'society-heliotrope-gallery',
             'position' => 3,
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
         ],
         [
             'title' => 'Actualité',
-            'navigation' => 'balsamine-menu',
+            'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
             'url' => '/articles/actualite',
@@ -78,19 +78,19 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
             'type' => 'post_category',
             'type_id' => 'actualite',
             'position' => 4,
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
         ],
         [
             'title' => 'Contact',
-            'navigation' => 'balsamine-menu',
+            'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
             'url' => '/contact',
             'route' => 'module:contact.type:static.action:show',
             'type' => 'page',
-            'type_id' => 'society-balsamine-contact',
+            'type_id' => 'society-heliotrope-contact',
             'position' => 5,
-            'website' => 'balsamine-society',
+            'website' => 'heliotrope-society',
         ]
     ];
 
@@ -115,10 +115,10 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
     {
         return [
             'Jet\Modules\Post\Fixtures\LoadPostRoute',
-            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
-            'Jet\Themes\Balsamine\Fixtures\LoadNavigation',
+            'Jet\Themes\Heliotrope\Fixtures\LoadWebsite',
+            'Jet\Themes\Heliotrope\Fixtures\LoadNavigation',
             'Jet\DataFixtures\LoadRoute',
-            'Jet\Themes\Balsamine\Fixtures\LoadPage'
+            'Jet\Themes\Heliotrope\Fixtures\LoadPage'
         ];
     }
 }

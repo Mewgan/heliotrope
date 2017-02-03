@@ -1,54 +1,78 @@
 {% extends template_from_string(data.website_layout) %}
 
 {% block css %}
-    <style>
-        #subheader{
-            background-image: url({{ img(field_render('subheader', 'page@'~data.page.id).path) }});
-        }
-    </style>
+
 {% endblock %}
 
 {% block page %}
-
-    <!-- subheader -->
-    <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>{{ data.page.title }}</h1>
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{{ img(field_render('subheader', 'page@'~data.page.id).path) }}">
+        <div class="container pt-100 pb-50">
+            <!-- Section Content -->
+            <div class="section-content pt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title text-white">
+                            {{ data.page.title }}
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- subheader close -->
 
-    <!-- content begin -->
-    <div id="content" class="no-top no-bottom">
-        <!-- section begin -->
-        <section id="section-gallery" aria-label="section-gallery" class="no-top no-bottom">
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Works Filter -->
+                    <div class="portfolio-filter font-alt align-center">
+                        <a href="#" class="active" data-filter="*">All</a>
+                        {% for category in field_render('gallery_categories','page@'~data.page.id) %}
+                            <a href="#{{ category.title | lower }}" class="" data-filter=".{{ category.title | lower }}">{{ category.title }}</a>
+                        {% endfor %}
+                    </div>
+                    <!-- End Works Filter -->
 
-            <div id="gallery" class="gallery zoom-gallery gallery-{{ field_render('gallery_column', 'page@'~data.page.id) }}-cols wow fadeInUp" data-wow-delay=".3s">
+                    <!-- Portfolio Gallery Grid -->
+                    <div id="grid" class="gallery-isotope grid-4 masonry clearfix">
+                        <!-- Portfolio Item Start -->
+                        {% for gallery in field_render('galleries', 'page@'~data.page.id) %}
+                            <div class="gallery-item {{ gallery.category | lower }}">
+                                <div class="thumb">
+                                    <img class="img-fullwidth" src="{{ img(gallery.image.path) }}" alt="{{ gallery.image.alt }}">
+                                    <div class="overlay-shade"></div>
+                                    <div class="icons-holder">
+                                        <div class="icons-holder-inner">
+                                            <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                <a data-lightbox="image" href="{{ img(gallery.image.path) }}"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hover-link" data-lightbox="image" href="{{ img(gallery.image.path) }}">Agrandir</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!-- Portfolio Item End -->
+                    </div>
+                    <!-- End Portfolio Gallery Grid -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-                {% set galleries = field_render('galleries', 'page@'~data.page.id) %}
-                {% for gallery in galleries %}
-                <!-- gallery item -->
-                <div class="item">
-                    <div class="picframe">
-                        <a href="{{ img(gallery.image.path) }}" title="{{ gallery.image.title }}">
-                            <span class="overlay">
-                                <span class="pf_text">
-                                    <span class="project-name">{{ gallery.image.title }}</span>
-                                </span>
-                            </span>
-                            <img src="{{ img(gallery.image.path) }}" alt="{{ gallery.image.alt }}" />
-                        </a>
+    <section class="bg-theme-colored">
+        <div class="container pt-30 pb-30">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-400 text-white font-raleway letter-space-2">Not every woman has time to go to a salon and have her hair blow-dried every day.</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-dark mt-30 p-10 pl-20 pr-20 text-white btn-flat no-border" data-toggle="modal" data-target="#BSParentModal" href="{{ booking_link }}" class="bs-modal-ajax-load" >Réserver</a>
                     </div>
                 </div>
-                <!-- close gallery item -->
-                {% endfor %}
             </div>
-        </section>
-        <!-- section close -->
-    </div>
-
+        </div>
+    </section>
 {% endblock %}

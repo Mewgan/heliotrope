@@ -1,6 +1,6 @@
 <?php
 
-namespace Jet\Themes\Balsamine\Fixtures;
+namespace Jet\Themes\Heliotrope\Fixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -12,47 +12,47 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
     use LoadFixture;
 
     protected $data = [
-        'Balsamine Specific Global' => [
+        'Heliotrope Specific Global' => [
             'title' => 'Données spécifique au thème',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
-            'website' => 'Balsamine Website'
+            'website' => 'Heliotrope Website'
         ],
-        'Balsamine Default Global' => [
+        'Heliotrope Default Global' => [
             'title' => 'Données globales',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
-            'website' => 'Balsamine Website'
+            'website' => 'Heliotrope Website'
         ],
-        'Balsamine Home Page' => [
+        'Heliotrope Home Page' => [
             'title' => 'Page d\'accueil',
             'rule' => 'page_rule',
             'operation' => '=',
-            'reference' => 'society-balsamine-home',
-            'website' => 'Balsamine Website'
+            'reference' => 'society-heliotrope-home',
+            'website' => 'Heliotrope Website'
         ],
-        'Balsamine Team Page' => [
-            'title' => 'Equipe',
+        'Heliotrope Price Page' => [
+            'title' => 'Tarif',
             'rule' => 'page_rule',
             'operation' => '=',
-            'reference' => 'society-balsamine-team',
-            'website' => 'Balsamine Website'
+            'reference' => 'society-heliotrope-price',
+            'website' => 'Heliotrope Website'
         ],
-        'Balsamine Gallery Page' => [
+        'Heliotrope Gallery Page' => [
             'title' => 'Galerie',
             'rule' => 'page_rule',
             'operation' => '=',
-            'reference' => 'society-balsamine-gallery',
-            'website' => 'Balsamine Website'
+            'reference' => 'society-heliotrope-gallery',
+            'website' => 'Heliotrope Website'
         ],
-        'Balsamine Page' => [
+        'Heliotrope Page' => [
             'title' => 'Page',
             'rule' => 'publication_type_rule',
             'operation' => '=',
             'value' => 'page',
-            'website' => 'Balsamine Website'
+            'website' => 'Heliotrope Website'
         ],
     ];
 
