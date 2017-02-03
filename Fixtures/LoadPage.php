@@ -13,24 +13,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         /* Aster pages */
-        'society-heliotrope-contact' =>  [
-            'title' => 'Contact',
-            'route' => 'module:contact.type:static.action:show',
-            'website' => 'Heliotrope Website',
-            'layout' => 'heliotrope_contact_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static',
-        ],
-        'society-heliotrope-gallery' =>  [
-            'title' => 'Galerie',
-            'route' => 'module:gallery.type:static.action:all',
-            'website' => 'Heliotrope Website',
-            'layout' => 'heliotrope_gallery_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static',
-        ],
         'society-heliotrope-price' =>  [
             'title' => 'Tarif',
             'route' => 'module:price.type:static.action:all',
@@ -41,7 +23,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'type' => 'static',
         ],
         'society-heliotrope-single-post' =>  [
-            'title' => 'Article',
+            'title' => 'Page d\'un article',
             'route' => 'module:post.type:dynamic.action:read',
             'website' => 'Heliotrope Website',
             'layout' => 'heliotrope_page_layout',
@@ -57,6 +39,24 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'dynamic'
+        ],
+        'society-heliotrope-gallery' =>  [
+            'title' => 'Galerie',
+            'route' => 'module:gallery.type:static.action:all',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_gallery_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static',
+        ],
+        'society-heliotrope-contact' =>  [
+            'title' => 'Contact',
+            'route' => 'module:contact.type:static.action:show',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_contact_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static',
         ],
         'society-heliotrope-home' =>  [
             'title' => 'Accueil',
