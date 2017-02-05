@@ -6,7 +6,7 @@
 @font-face {
   font-family: "flaticon-set-salon";
   src: url("../fonts/flaticons/flaticon-set-salon.eot");
-  src: url("../fonts/flaticons/flaticon-set-salon.eot%3F") format("embedded-opentype"),
+  src: url("../fonts/flaticons/flaticon-set-salon.eot") format("embedded-opentype"),
        url("../fonts/flaticons/flaticon-set-salon.woff") format("woff"),
        url("../fonts/flaticons/flaticon-set-salon.ttf") format("truetype"),
        url("../fonts/flaticons/flaticon-set-salon.svg") format("svg");

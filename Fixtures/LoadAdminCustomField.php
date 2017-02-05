@@ -27,7 +27,20 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [
                 'media_render_type' => 'object'
             ],
-            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo.png']
+            'content' => ['value' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png']
+        ],
+        'heliotrope_second_logo' => [
+            'scope' => 'global',
+            'title' => 'Logo secondaire',
+            'name' => 'sub_logo',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Default Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide.png']
         ],
         'heliotrope_opening_hours' => [
             'scope' => 'global',
@@ -111,6 +124,23 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => ['value' => '#']
         ],
         /* Theme specific */
+        'heliotrope_layout_mode' => [
+            'scope' => 'global',
+            'title' => 'Disposition du thème',
+            'name' => 'layout_mode',
+            'type' => 'select',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => 'boxed','value' => 'Boxed'],
+                    ['key' => 'full','value' => 'Full Width'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => 'full']
+        ],
         'heliotrope_theme_color' => [
             'scope' => 'global',
             'title' => 'Couleur du thème',

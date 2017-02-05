@@ -75,19 +75,23 @@
 
         <style>
             h1, h2, h3, h4, h5, h6 {
-                font-family: '{{ title_font[0] }}';
+                font-family: {{ title_font[0] | raw }};
+            }
+            body{
+                font-family: {{ body_font[0] | raw }}
             }
         </style>
 
     {% endblock %}
 </head>
-<body style="font-family: {{ body_font[0] }}">
+<body class="{% if field_render('layout_mode') == 'boxed' %}boxed-layout bg-gray-light pt-40 pb-40 p-sm-0{% endif %}">
 {% set salon = data_render('Jet\\Models\\Society', ['s.name']) %}
 {% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
 {% set account = data_render('Jet\\Models\\Account', ['a.phone','a.email']) %}
 {% set opening_hours = field_render('opening_hours') %}
 {% set logo = field_render('logo') %}
 {% set booking_link = field_render('booking_link') %}
+{% set socials = field_render('social_networks') %}
 
 <div id="wrapper">
     <!-- preloader -->
@@ -97,8 +101,8 @@
         </div>
         <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
     </div>
-
     <!-- Header -->
+    {% if data.page.route.name == 'home' %}
     <header id="header" class="header">
         <div class="header-nav navbar-fixed-top navbar-dark navbar-transparent navbar-sticky-animated animated-active">
             <div class="header-nav-wrapper">
@@ -114,6 +118,52 @@
             </div>
         </div>
     </header>
+    {% else %}
+        {% set sub_logo = field_render('sub_logo') %}
+        <header id="header" class="header">
+            <div class="header-top sm-text-center bg-theme-colored">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="widget m-0 mt-5 no-border">
+                                <ul class="list-inline text-left sm-text-center">
+                                    <li class="pl-10 pr-10 mb-0 pb-0">
+                                        <div class="header-widget text-white"><i class="fa fa-phone"></i> {{ account.phone }} </div>
+                                    </li>
+                                    <li class="pl-10 pr-10 mb-0 pb-0">
+                                        <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> {{ account.email }}</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-right flip sm-text-center">
+                            <div class="widget m-0">
+                                <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm">
+                                    {% for social in socials %}
+                                        <li class="mb-0 pb-0"><a href="{{ social.link }}"><i
+                                                        class="fa fa-{{ social.name | lower }} fa-lg"></i></a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="header-nav-wrapper navbar-scrolltofixed bg-lighter">
+                    <div class="container">
+                        <nav id="menuzord-right" class="menuzord no-bg">
+                            <a class="menuzord-brand pull-left flip" href="{{ link('home') }}">
+                                <img src="{{ img(sub_logo.path) }}" alt="{{ sub_logo.alt }}">
+                            </a>
+                            {{ content_render('navigation') }}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    {% endif %}
 
     <div class="main-content">
         {% block page %}{% endblock %}
@@ -150,7 +200,6 @@
                     <div class="widget dark">
                         <h5 class="widget-title mb-10">Réseaux sociaux</h5>
                         <ul class="styled-icons icon-dark icon-circled icon-sm">
-                            {% set socials = field_render('social_networks') %}
                             {% for social in socials %}
                                 <li><a href="{{ social.link }}"><i
                                                 class="fa fa-{{ social.name | lower }} fa-lg"></i></a></li>
@@ -171,7 +220,7 @@
         </div>
     </footer>
 
-    <a class="scrollToTop" href="index-mp-layout7.html#"><i class="fa fa-angle-up"></i></a>
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 </div>
 <!-- end wrapper -->
 

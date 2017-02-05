@@ -28,6 +28,14 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Logo heliotrope'
         ],
         [
+            'title' => 'Sub logo theme heliotrope',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide.png',
+            'type' => 'image/png',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Logo heliotrope'
+        ],
+        [
             'title' => 'Background image 1',
             'path' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
             'type' => 'image/jpg',

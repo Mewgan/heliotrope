@@ -41,6 +41,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'medias' => [
                 '/public/media/thumbnail/theme-heliotrope-thumbnail.png',
                 '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
+                '/src/Themes/Heliotrope/Resources/public/img/logo-wide.png',
                 '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
                 '/src/Themes/Heliotrope/Resources/public/img/bg/bg2.jpg',
                 '/src/Themes/Heliotrope/Resources/public/img/bg/bg3.jpg',
