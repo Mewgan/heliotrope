@@ -77,7 +77,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows' => [0,1]
+                'rows' => [0, 1]
             ]
         ],
         'heliotrope_social_name' => [
@@ -134,8 +134,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => 'boxed','value' => 'Boxed'],
-                    ['key' => 'full','value' => 'Full Width'],
+                    ['key' => 'boxed', 'value' => 'Boxed'],
+                    ['key' => 'full', 'value' => 'Full Width'],
                 ],
                 'multiple' => false
             ],
@@ -151,18 +151,18 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => 'green','value' => 'Vert'],
-                    ['key' => 'orange','value' => 'Orange'],
-                    ['key' => 'red','value' => 'Rouge'],
-                    ['key' => 'blue','value' => 'Bleu'],
-                    ['key' => 'sky-blue','value' => 'Bleu ciel'],
-                    ['key' => 'sky-blue-light','value' => 'Bleu ciel light'],
-                    ['key' => 'lemon','value' => 'Citron'],
-                    ['key' => 'yellow','value' => 'Jaune'],
-                    ['key' => 'rose','value' => 'Rose'],
-                    ['key' => 'gray','value' => 'Gris'],
-                    ['key' => 'blue-gray','value' => 'Bleu Gris'],
-                    ['key' => 'brown','value' => 'Marron'],
+                    ['key' => 'green', 'value' => 'Vert'],
+                    ['key' => 'orange', 'value' => 'Orange'],
+                    ['key' => 'red', 'value' => 'Rouge'],
+                    ['key' => 'blue', 'value' => 'Bleu'],
+                    ['key' => 'sky-blue', 'value' => 'Bleu ciel'],
+                    ['key' => 'sky-blue-light', 'value' => 'Bleu ciel light'],
+                    ['key' => 'lemon', 'value' => 'Citron'],
+                    ['key' => 'yellow', 'value' => 'Jaune'],
+                    ['key' => 'rose', 'value' => 'Rose'],
+                    ['key' => 'gray', 'value' => 'Gris'],
+                    ['key' => 'blue-gray', 'value' => 'Bleu Gris'],
+                    ['key' => 'brown', 'value' => 'Marron'],
                 ],
                 'multiple' => false
             ],
@@ -178,14 +178,14 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => 'default','value' => 'Défaut'],
-                    ['key' => 'blue','value' => 'Bleu'],
-                    ['key' => 'green','value' => 'Vert'],
-                    ['key' => 'red','value' => 'Rouge'],
-                    ['key' => 'orange','value' => 'Orange'],
-                    ['key' => 'yellow','value' => 'Jaune'],
-                    ['key' => 'purple','value' => 'Violet'],
-                    ['key' => 'pink','value' => 'Rose'],
+                    ['key' => 'default', 'value' => 'Défaut'],
+                    ['key' => 'blue', 'value' => 'Bleu'],
+                    ['key' => 'green', 'value' => 'Vert'],
+                    ['key' => 'red', 'value' => 'Rouge'],
+                    ['key' => 'orange', 'value' => 'Orange'],
+                    ['key' => 'yellow', 'value' => 'Jaune'],
+                    ['key' => 'purple', 'value' => 'Violet'],
+                    ['key' => 'pink', 'value' => 'Rose'],
                 ],
                 'multiple' => false
             ],
@@ -201,21 +201,21 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => 'menuzord-rounded-boxed','value' => 'Défaut'],
-                    ['key' => 'menuzord-border-top','value' => 'Border top'],
-                    ['key' => 'menuzord-border-bottom','value' => 'Border bottom'],
-                    ['key' => 'menuzord-border-boxed','value' => 'Border boxed'],
-                    ['key' => 'menuzord-border-left','value' => 'Border left'],
-                    ['key' => 'menuzord-border-top-bottom','value' => 'Border top bottom'],
-                    ['key' => 'menuzord-border-trace','value' => 'Border trace'],
-                    ['key' => 'menuzord-boxed','value' => 'Boxed'],
-                    ['key' => 'menuzord-colored','value' => 'Colored'],
-                    ['key' => 'menuzord-dark','value' => 'Dark'],
-                    ['key' => 'menuzord-gradient','value' => 'Gradient'],
-                    ['key' => 'menuzord-shadow','value' => 'Shadow'],
-                    ['key' => 'menuzord-strip','value' => 'Strip'],
-                    ['key' => 'menuzord-subcolored','value' => 'Sub-Colored'],
-                    ['key' => 'menuzord-top-bottom-boxed-border','value' => 'Top Bottom Boxed Border'],
+                    ['key' => 'menuzord-rounded-boxed', 'value' => 'Défaut'],
+                    ['key' => 'menuzord-border-top', 'value' => 'Border top'],
+                    ['key' => 'menuzord-border-bottom', 'value' => 'Border bottom'],
+                    ['key' => 'menuzord-border-boxed', 'value' => 'Border boxed'],
+                    ['key' => 'menuzord-border-left', 'value' => 'Border left'],
+                    ['key' => 'menuzord-border-top-bottom', 'value' => 'Border top bottom'],
+                    ['key' => 'menuzord-border-trace', 'value' => 'Border trace'],
+                    ['key' => 'menuzord-boxed', 'value' => 'Boxed'],
+                    ['key' => 'menuzord-colored', 'value' => 'Colored'],
+                    ['key' => 'menuzord-dark', 'value' => 'Dark'],
+                    ['key' => 'menuzord-gradient', 'value' => 'Gradient'],
+                    ['key' => 'menuzord-shadow', 'value' => 'Shadow'],
+                    ['key' => 'menuzord-strip', 'value' => 'Strip'],
+                    ['key' => 'menuzord-subcolored', 'value' => 'Sub-Colored'],
+                    ['key' => 'menuzord-top-bottom-boxed-border', 'value' => 'Top Bottom Boxed Border'],
                 ],
                 'multiple' => false
             ],
@@ -231,17 +231,17 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans",'value' => 'Open Sans'],
-                    ['key' => "'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans",'value' => 'Droid Sans'],
-                    ['key' => "'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans",'value' => 'PT Sans'],
-                    ['key' => "'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro",'value' => 'Source Sans Pro'],
-                    ['key' => "'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway",'value' => 'Raleway'],
-                    ['key' => "'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab",'value' => 'Josefin Slab'],
-                    ['key' => "'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto",'value' => 'Roboto'],
-                    ['key' => "'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif",'value' => 'Droid Serif'],
-                    ['key' => "'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald",'value' => 'Oswald'],
-                    ['key' => "'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato",'value' => 'Lato'],
-                    ['key' => "'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo",'value' => 'Arvo'],
+                    ['key' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans", 'value' => 'Open Sans'],
+                    ['key' => "'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans", 'value' => 'Droid Sans'],
+                    ['key' => "'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans", 'value' => 'PT Sans'],
+                    ['key' => "'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro", 'value' => 'Source Sans Pro'],
+                    ['key' => "'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway", 'value' => 'Raleway'],
+                    ['key' => "'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab", 'value' => 'Josefin Slab'],
+                    ['key' => "'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto", 'value' => 'Roboto'],
+                    ['key' => "'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif", 'value' => 'Droid Serif'],
+                    ['key' => "'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald", 'value' => 'Oswald'],
+                    ['key' => "'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato", 'value' => 'Lato'],
+                    ['key' => "'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo", 'value' => 'Arvo'],
                 ],
                 'multiple' => false
             ],
@@ -257,17 +257,17 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Specific Global',
             'data' => [
                 'contents' => [
-                    ['key' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans",'value' => 'Open Sans'],
-                    ['key' => "'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans",'value' => 'Droid Sans'],
-                    ['key' => "'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans",'value' => 'PT Sans'],
-                    ['key' => "'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro",'value' => 'Source Sans Pro'],
-                    ['key' => "'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway",'value' => 'Raleway'],
-                    ['key' => "'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab",'value' => 'Josefin Slab'],
-                    ['key' => "'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto",'value' => 'Roboto'],
-                    ['key' => "'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif",'value' => 'Droid Serif'],
-                    ['key' => "'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald",'value' => 'Oswald'],
-                    ['key' => "'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato",'value' => 'Lato'],
-                    ['key' => "'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo",'value' => 'Arvo'],
+                    ['key' => "'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans", 'value' => 'Open Sans'],
+                    ['key' => "'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans", 'value' => 'Droid Sans'],
+                    ['key' => "'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans", 'value' => 'PT Sans'],
+                    ['key' => "'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro", 'value' => 'Source Sans Pro'],
+                    ['key' => "'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway", 'value' => 'Raleway'],
+                    ['key' => "'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab", 'value' => 'Josefin Slab'],
+                    ['key' => "'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto", 'value' => 'Roboto'],
+                    ['key' => "'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif", 'value' => 'Droid Serif'],
+                    ['key' => "'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald", 'value' => 'Oswald'],
+                    ['key' => "'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato", 'value' => 'Lato'],
+                    ['key' => "'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo", 'value' => 'Arvo'],
                 ],
                 'multiple' => false
             ],
@@ -305,7 +305,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Home Page',
             'data' => [],
             'content' => [
-                'page@society-heliotrope-home' => '<h1 class="text-theme-colored text-uppercase font-playfair font-weight-600 font-100 line-height-1 m-0">Men\'s</h1>
+                'page@society-heliotrope-home' => '<h1 class="text-theme-colored text-uppercase font-playfair font-weight-600 font-100 line-height-1 m-0">Women\'s</h1>
                 <h2 class="font-playfair font-48 text-white font-weight-400 m-0"> Hairstyle &amp; Fashion</h2>
                 <p class="text-white font-weight-200 font-18 mt-10">Every day we bring hope to millions of children in the world\'s <br>hardest places as a sign of God\'s unconditional love.</p>               
              '
@@ -321,9 +321,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Home Page',
             'data' => [
                 'contents' => [
-                    ['key' => 'left','value' => 'Gauche'],
-                    ['key' => 'center','value' => 'Centre'],
-                    ['key' => 'right','value' => 'Droite'],
+                    ['key' => 'left', 'value' => 'Gauche'],
+                    ['key' => 'center', 'value' => 'Centre'],
+                    ['key' => 'right', 'value' => 'Droite'],
                 ],
                 'multiple' => false
             ],
@@ -354,7 +354,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-heliotrope-home' => [0,1,2,3,4]
+                'rows@page@society-heliotrope-home' => [0, 1, 2, 3, 4]
             ]
         ],
         'heliotrope_team_image' => [
@@ -374,7 +374,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 '/src/Themes/Heliotrope/Resources/public/img/team/3.png',
                 '/src/Themes/Heliotrope/Resources/public/img/team/4.png',
                 '/src/Themes/Heliotrope/Resources/public/img/team/5.png',
-                ]
+            ]
             ]
         ],
         'heliotrope_team_name' => [
@@ -386,7 +386,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'heliotrope_team',
             'cf' => 'Heliotrope Home Page',
             'data' => [],
-            'content' => ['page@society-heliotrope-home' =>  ['Briana', 'Jessica', 'Rachel', 'Emma', 'Delphine'],
+            'content' => ['page@society-heliotrope-home' => ['Briana', 'Jessica', 'Rachel', 'Emma', 'Delphine'],
             ]
         ],
         'heliotrope_team_description' => [
@@ -398,7 +398,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'heliotrope_team',
             'cf' => 'Heliotrope Home Page',
             'data' => [],
-            'content' => ['page@society-heliotrope-home' => ['Hair Expert','Hair Expert','Hair Expert','Hair Expert','Hair Expert']
+            'content' => ['page@society-heliotrope-home' => ['Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert']
             ]
         ],
         'heliotrope_homepage_partners' => [
@@ -412,7 +412,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-heliotrope-home' => [0,1,2,3,4,5,6]
+                'rows@page@society-heliotrope-home' => [0, 1, 2, 3, 4, 5, 6]
             ]
         ],
         'heliotrope_homepage_partners_image' => [
@@ -437,6 +437,229 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             ]
         ],
+        /* Homepage slider */
+        'heliotrope_homepage_slider' => [
+            'scope' => 'specified',
+            'title' => 'Slider',
+            'name' => 'homepage_slider',
+            'type' => 'repeater',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-home-slider' => [0, 1, 2]
+            ]
+        ],
+        'heliotrope_homepage_slider_img' => [
+            'scope' => 'specified',
+            'title' => 'Images du slider',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'heliotrope_homepage_slider',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-heliotrope-home-slider' => [
+                '/src/Themes/Heliotrope/Resources/public/img/bg/bg9.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/bg/bg3.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/bg/bg2.jpg',
+            ],
+            ]
+        ],
+        'heliotrope_homepage_slider_texts' => [
+            'scope' => 'specified',
+            'title' => 'Textes',
+            'name' => 'layers',
+            'type' => 'repeater',
+            'position' => 1,
+            'parent' => 'heliotrope_homepage_slider',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'min_row' => '2',
+                'max_row' => '2'
+            ],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-home-slider' => [
+                    0 => [0, 1],
+                    1 => [0, 1],
+                    2 => [0, 1]
+                ]
+            ]
+        ],
+        'heliotrope_homepage_slider_text' => [
+            'scope' => 'specified',
+            'title' => 'Texte',
+            'name' => 'text',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'heliotrope_homepage_slider_texts',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => [
+                'page@society-heliotrope-home-slider' => [
+                    ['Get Your Dreamy', 'Hairstyle'],
+                    ['- Estimated Since 1986 -', 'We Are With You'],
+                    ['Most Popular Barber', 'Saloon']
+                ]
+            ]
+        ],
+        'heliotrope_homepage_slider_attribute' => [
+            'scope' => 'specified',
+            'title' => 'Attributs',
+            'name' => 'attribute',
+            'type' => 'json',
+            'position' => 1,
+            'parent' => 'heliotrope_homepage_slider_texts',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => [
+                'page@society-heliotrope-home-slider' => [
+                    [
+                        [
+                            'class' => "tp-caption tp-resizeme font-playfair text-white font-weight-400 m-0",
+                            'data-x' => "['right']",
+                            'data-hoffset' => "['30']",
+                            'data-y' => "['middle']",
+                            'data-voffset' => "['-160']",
+                            'data-fontsize' => "['48']",
+                            'data-lineheight' => "['78']",
+                            'data-width' => "none",
+                            'data-height' => "none",
+                            'data-whitespace' => "nowrap",
+                            'data-transform_idle' => "o:1;s:500",
+                            'data-transform_in' => "y:100;scaleX:1;scaleY:1;opacity:0;",
+                            'data-transform_out' => "x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;",
+                            'data-mask_in' => "x:0px;y:0px;s:inherit;e:inherit;",
+                            'data-mask_out' => "x:inherit;y:inherit;s:inherit;e:inherit;",
+                            'data-start' => "1000",
+                            'data-splitin' => "none",
+                            'data-splitout' => "none",
+                            'data-responsive_offset' => "on",
+                            'style' => "z-index: 5; white-space: nowrap; font-weight:700;"
+                        ],
+                        [
+                            'class' => "tp-caption tp-resizeme text-theme-colored text-uppercase font-playfair font-weight-600",
+                            'data-x' => "['right']",
+                            'data-hoffset' => "['30']",
+                            'data-y' => "['middle']",
+                            'data-voffset' => "['-80']",
+                            'data-fontsize' => "['90']",
+                            'data-lineheight' => "['114']",
+                            'data-width' => "none",
+                            'data-height' => "none",
+                            'data-whitespace' => "nowrap",
+                            'data-transform_idle' => "o:1;s:500",
+                            'data-transform_in' => "y:100;scaleX:1;scaleY:1;opacity:0;",
+                            'data-transform_out' => "x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;",
+                            'data-mask_in' => "x:0px;y:0px;s:inherit;e:inherit;",
+                            'data-mask_out' => "x:inherit;y:inherit;s:inherit;e:inherit;",
+                            'data-start' => "1000",
+                            'data-splitin' => "none",
+                            'data-splitout' => "none",
+                            'data-responsive_offset' => "on",
+                            'style' => "z-index: 5; white-space: nowrap; font-weight:700;"
+                        ],
+                    ],
+                    [
+                        [
+                            'class' => "tp-caption tp-resizeme text-center text-white",
+                            'data-x' => "['center']",
+                            'data-hoffset' => "['0']",
+                            'data-y' => "['middle']",
+                            'data-voffset' => "['-70']",
+                            'data-fontsize' => "['24']",
+                            'data-lineheight' => "['64']",
+                            'data-width' => "none",
+                            'data-height' => "none",
+                            'data-whitespace' => "nowrap",
+                            'data-transform_idle' => "o:1;s:500",
+                            'data-transform_in' => "y:100;scaleX:1;scaleY:1;opacity:0;",
+                            'data-transform_out' => "x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;",
+                            'data-mask_in' => "x:0px;y:0px;s:inherit;e:inherit;",
+                            'data-mask_out' => "x:inherit;y:inherit;s:inherit;e:inherit;",
+                            'data-start' => "1000",
+                            'data-splitin' => "none",
+                            'data-splitout' => "none",
+                            'data-responsive_offset' => "on",
+                            'style' => "z-index: 5; white-space: nowrap; font-weight:400;",
+                        ],
+                        [
+                            'class' => "tp-caption tp-resizeme text-uppercase text-center font-playfair text-white",
+                            'data-x' => "['center']",
+                            'data-hoffset' => "['0']",
+                            'data-y' => "['middle']",
+                            'data-voffset' => "['-10']",
+                            'data-fontsize' => "['72']",
+                            'data-lineheight' => "['100']",
+                            'data-width' => "none",
+                            'data-height' => "none",
+                            'data-whitespace' => "nowrap",
+                            'data-transform_idle' => "o:1;s:500",
+                            'data-transform_in' => "y:100;scaleX:1;scaleY:1;opacity:0;",
+                            'data-transform_out' => "x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;",
+                            'data-mask_in' => "x:0px;y:0px;s:inherit;e:inherit;",
+                            'data-mask_out' => "x:inherit;y:inherit;s:inherit;e:inherit;",
+                            'data-start' => "1000",
+                            'data-splitin' => "none",
+                            'data-splitout' => "none",
+                            'data-responsive_offset' => "on",
+                            'style' => "z-index: 5; white-space: nowrap; font-weight:700;"
+                        ]
+                    ],
+                    [
+                        [
+                            'class' => "tp-caption tp-resizeme text-white text-uppercase font-playfair font-weight-400",
+                            'data-x' => "['left']",
+                            'data-hoffset' => "['30']",
+                            'data-y' => "['middle']",
+                            'data-voffset' => "['-160']",
+                            'data-fontsize' => "['42']",
+                            'data-lineheight' => "['78']",
+                            'data-width' => "none",
+                            'data-height' => "none",
+                            'data-whitespace' => "nowrap",
+                            'data-transform_idle' => "o:1;s:500",
+                            'data-transform_in' => "y:100;scaleX:1;scaleY:1;opacity:0;",
+                            'data-transform_out' => "x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;",
+                            'data-mask_in' => "x:0px;y:0px;s:inherit;e:inherit;",
+                            'data-mask_out' => "x:inherit;y:inherit;s:inherit;e:inherit;",
+                            'data-start' => "1000",
+                            'data-splitin' => "none",
+                            'data-splitout' => "none",
+                            'data-responsive_offset' => "on",
+                            'style' => "z-index: 5; white-space: nowrap; font-weight:700;"
+                        ],
+                        [
+                            'class' => "tp-caption tp-resizeme text-uppercase font-playfair text-theme-colored font-weight-600 m-0",
+                            'data-x' => "['left']",
+                            'data-hoffset' => "['30']",
+                            'data-y' => "['middle']",
+                            'data-voffset' => "['-80']",
+                            'data-fontsize' => "['100']",
+                            'data-lineheight' => "['114']",
+                            'data-width' => "none",
+                            'data-height' => "none",
+                            'data-whitespace' => "nowrap",
+                            'data-transform_idle' => "o:1;s:500",
+                            'data-transform_in' => "y:100;scaleX:1;scaleY:1;opacity:0;",
+                            'data-transform_out' => "x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;",
+                            'data-mask_in' => "x:0px;y:0px;s:inherit;e:inherit;",
+                            'data-mask_out' => "x:inherit;y:inherit;s:inherit;e:inherit;",
+                            'data-start' => "1000",
+                            'data-splitin' => "none",
+                            'data-splitout' => "none",
+                            'data-responsive_offset' => "on",
+                            'style' => "z-index: 5; white-space: nowrap; font-weight:700;"
+                        ],
+                    ]
+                ]
+            ]
+        ],
         /* Gallery Page */
         'heliotrope_gallery_category' => [
             'scope' => 'specified',
@@ -449,7 +672,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-heliotrope-gallery' => [0,1,2]
+                'rows@page@society-heliotrope-gallery' => [0, 1, 2]
             ]
         ],
         'heliotrope_gallery_category_title' => [
@@ -462,7 +685,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Gallery Page',
             'data' => [],
             'content' => [
-                'page@society-heliotrope-gallery' => ['Branding','Design','Photography']
+                'page@society-heliotrope-gallery' => ['Branding', 'Design', 'Photography']
             ]
         ],
         'heliotrope_gallery' => [
@@ -476,7 +699,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-heliotrope-gallery' => [0,1,2,3,4,5,6]
+                'rows@page@society-heliotrope-gallery' => [0, 1, 2, 3, 4, 5, 6]
             ]
         ],
         'heliotrope_gallery_image' => [
@@ -510,7 +733,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'heliotrope_gallery',
             'cf' => 'Heliotrope Gallery Page',
             'data' => [],
-            'content' => ['page@society-heliotrope-gallery' => ['Photography','Branding','Design', 'Branding','Photography','Design', 'Branding']
+            'content' => ['page@society-heliotrope-gallery' => ['Photography', 'Branding', 'Design', 'Branding', 'Photography', 'Design', 'Branding']
             ]
         ],
         /* Price page*/
@@ -525,7 +748,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-heliotrope-price' => [0,1,2]
+                'rows@page@society-heliotrope-price' => [0, 1, 2]
             ]
         ],
         'heliotrope_price_cat' => [
@@ -537,7 +760,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'heliotrope_price',
             'cf' => 'Heliotrope Price Page',
             'data' => [],
-            'content' => ['page@society-heliotrope-price' => ['Femme','Homme','Enfant']]
+            'content' => ['page@society-heliotrope-price' => ['Femme', 'Homme', 'Enfant']]
         ],
         'heliotrope_price_list' => [
             'scope' => 'specified',
@@ -551,9 +774,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => [
                 'type' => 'repeater',
                 'rows@page@society-heliotrope-price' => [
-                    0 => [0,1,2,3,4,5],
-                    1 => [0,1,2],
-                    2 => [0,1,2]
+                    0 => [0, 1, 2, 3, 4, 5],
+                    1 => [0, 1, 2],
+                    2 => [0, 1, 2]
                 ]
             ]
         ],
@@ -568,9 +791,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => ['page@society-heliotrope-price' =>
                 [
-                    ['WOMAN\'S HAIRCUT','WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT'],
-                    ['MAN\'S HAIRCUT','MAN\'S HAIRCUT', 'MAN\'S HAIRCUT'],
-                    ['CHILD\'S HAIRCUT','CHILD\'S HAIRCUT', 'CHILD\'S HAIRCUT'],
+                    ['WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT', 'WOMAN\'S HAIRCUT'],
+                    ['MAN\'S HAIRCUT', 'MAN\'S HAIRCUT', 'MAN\'S HAIRCUT'],
+                    ['CHILD\'S HAIRCUT', 'CHILD\'S HAIRCUT', 'CHILD\'S HAIRCUT'],
                 ]
             ]
         ],
@@ -619,9 +842,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => ['page@society-heliotrope-price' =>
                 [
-                    ['80€','45€', '75€', '55€', '100€', '60€'],
-                    ['20€','35€', '40€'],
-                    ['8€','12€', '15€'],
+                    ['80€', '45€', '75€', '55€', '100€', '60€'],
+                    ['20€', '35€', '40€'],
+                    ['8€', '12€', '15€'],
                 ]
             ]
         ],

@@ -82,6 +82,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 '/src/Themes/Heliotrope/Resources/public/img/gallery/m2.jpg',
                 '/src/Themes/Heliotrope/Resources/public/img/gallery/m3.jpg',
                 '/src/Themes/Heliotrope/Resources/public/img/products/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/about/2.jpg'
             ],
             'data' => [
                 'parent_exclude' => [],

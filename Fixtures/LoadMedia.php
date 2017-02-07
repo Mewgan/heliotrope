@@ -354,6 +354,14 @@ class LoadMedia extends AbstractFixture
             'access_level' => 2,
             'alt' => 'Tarif'
         ],
+        [
+            'title' => 'Horaires d\'ouverture',
+            'path' => '/src/Themes/Heliotrope/Resources/public/img/about/2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Horaires d\'ouverture'
+        ],
 
     ];
     

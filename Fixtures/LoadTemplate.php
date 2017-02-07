@@ -28,6 +28,14 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'heliotrope_home_page_slider_layout' => [
+            'name' => 'ThemeHeliotropeHomePageSliderFileLayout',
+            'title' => 'Theme Heliotrope Home Page Slider Template',
+            'content' => 'Heliotrope/Views/index_slider',
+            'category' => 'layout',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
         'heliotrope_page_layout' => [
             'name' => 'ThemeHeliotropePageFileLayout',
             'title' => 'Theme Heliotrope Page Template',
