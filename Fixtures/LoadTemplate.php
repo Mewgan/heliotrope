@@ -84,6 +84,14 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'heliotrope_home_slider_list_news_partial' => [
+            'name' => 'ThemeHeliotropeHomeSliderNewsListFilePartial',
+            'title' => 'Theme Heliotrope Home Slider News List Template',
+            'content' => 'Heliotrope/Views/home_slider_list_news',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
         'heliotrope_price_layout' => [
             'name' => 'ThemeHeliotropePriceFileLayout',
             'title' => 'Theme Heliotrope Price Template',

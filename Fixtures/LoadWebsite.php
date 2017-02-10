@@ -31,6 +31,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_home_page_layout',
                 'heliotrope_home_list_service_partial',
                 'heliotrope_home_list_news_partial',
+                'heliotrope_home_slider_list_news_partial',
                 'heliotrope_navigation_partial',
                 'heliotrope_post_list_partial',
                 'heliotrope_single_post_partial',

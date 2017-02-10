@@ -101,6 +101,75 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
+        /* Slider homepage */
+        'heliotrope_slider_list_home_service_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste de services',
+            'block' => 'list_home_service',
+            'website' => 'heliotrope-society',
+            'module' => 'module_post_list',
+            'template' => 'heliotrope_home_list_service_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-home-slider',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 4,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['service'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        'heliotrope_slider_list_home_news_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste d\'actualités',
+            'block' => 'list_home_news',
+            'website' => 'heliotrope-society',
+            'module' => 'module_post_list',
+            'template' => 'heliotrope_home_slider_list_news_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-home-slider',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 6,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['actualite'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
         'heliotrope_list_post_content' => [
             'cat_mod' => 'post',
             'name' => 'Liste d\'articles',

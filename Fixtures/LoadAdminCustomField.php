@@ -513,6 +513,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Attributs',
             'name' => 'attribute',
             'type' => 'json',
+            'access_level' => 2,
             'position' => 1,
             'parent' => 'heliotrope_homepage_slider_texts',
             'cf' => 'Heliotrope Home Page Slider',
@@ -658,6 +659,144 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                         ],
                     ]
                 ]
+            ]
+        ],
+        'heliotrope_homepage_slider_opening_background' => [
+            'scope' => 'specified',
+            'title' => 'Image du background',
+            'name' => 'background_opening_hours',
+            'type' => 'media',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => [
+                'page@society-heliotrope-home-slider' => '/src/Themes/Heliotrope/Resources/public/img/about/2.jpg'
+            ]
+        ],
+        'heliotrope_homepage_slider_about_us' => [
+            'scope' => 'specified',
+            'title' => 'Article',
+            'name' => 'homepage_about_us',
+            'type' => 'post',
+            'website' => 'Aster Website',
+            'position' => 2,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'categories' => []
+            ],
+            'content' => ['page@society-heliotrope-home-slider' => 'heliotrope-about-us']
+        ],
+        'heliotrope_homepage_slider_team' => [
+            'scope' => 'specified',
+            'title' => 'Equipes',
+            'name' => 'teams',
+            'type' => 'repeater',
+            'position' => 3,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-home-slider' => [0, 1, 2, 3, 4]
+            ]
+        ],
+        'heliotrope_homepage_slider_team_image' => [
+            'scope' => 'specified',
+            'title' => 'Image',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'heliotrope_homepage_slider_team',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-heliotrope-home-slider' => [
+                '/src/Themes/Heliotrope/Resources/public/img/team/1.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/2.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/3.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/4.png',
+                '/src/Themes/Heliotrope/Resources/public/img/team/5.png',
+            ]
+            ]
+        ],
+        'heliotrope_homepage_slider_team_name' => [
+            'scope' => 'specified',
+            'title' => 'Nom',
+            'name' => 'name',
+            'type' => 'string',
+            'position' => 1,
+            'parent' => 'heliotrope_homepage_slider_team',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => ['page@society-heliotrope-home-slider' => ['Briana', 'Jessica', 'Rachel', 'Emma', 'Delphine'],
+            ]
+        ],
+        'heliotrope_homepage_slider_team_description' => [
+            'scope' => 'specified',
+            'title' => 'Description',
+            'name' => 'description',
+            'type' => 'string',
+            'position' => 2,
+            'parent' => 'heliotrope_homepage_slider_team',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => ['page@society-heliotrope-home-slider' => ['Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert']
+            ]
+        ],
+        'heliotrope_homepage_slider_partners' => [
+            'scope' => 'specified',
+            'title' => 'Partenaire',
+            'name' => 'partners',
+            'type' => 'repeater',
+            'position' => 4,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-heliotrope-home-slider' => [0, 1, 2, 3, 4, 5, 6]
+            ]
+        ],
+        'heliotrope_homepage_slider_partners_image' => [
+            'scope' => 'specified',
+            'title' => 'Images du slider',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'heliotrope_homepage_slider_partners',
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-heliotrope-home-slider' => [
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
+            ],
+            ]
+        ],
+        'heliotrope_homepage_slider_partners_background' => [
+            'scope' => 'specified',
+            'title' => 'Image du background pour les partenaires',
+            'name' => 'partners_background',
+            'type' => 'media',
+            'position' => 6,
+            'parent' => null,
+            'cf' => 'Heliotrope Home Page Slider',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => [
+                'page@society-heliotrope-home-slider' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg3.jpg'
             ]
         ],
         /* Gallery Page */

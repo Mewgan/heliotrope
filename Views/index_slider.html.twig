@@ -41,9 +41,9 @@
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="p-60 pt-40 pb-40" data-bg-img="{{ img(field_render('background_opening_hours').path) }}">
+                        <div class="p-60 pt-40 pb-40" data-bg-img="{{ img(field_render('background_opening_hours','page').path) }}">
                             <h3 class="text-theme-colored text-uppercase letter-space-2">Horaires d'ouverture !</h3>
-                            <div class="item-html divider" >
+                            <div class="item-html divider text-white" >
                                 {{ opening_hours | raw }}
                                 <a href="{{ booking_link }}" class="btn btn-theme-colored btn-flat btn-lg mt-20">Réserver</a>
                             </div>
@@ -74,83 +74,78 @@
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center pl-0 pr-0 mb-20">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-female-hair-shape-and-face-silhouette text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Make Up</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
+                    {{ content_render('list_home_service') }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: trainer -->
+    <section id="trainer" class="bg-lighter">
+        <div class="container pb-0">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase title" >Notre <span class="text-black font-weight-300">Equipe</span></h2>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center pl-0 pr-0 mb-20">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-razors text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Nails Design</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center pl-0 pr-0 mb-20">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-hairdresser-washing-the-hair-of-a-client-with-bubbles-shampoo text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Beauty services </strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center pl-0 pr-0 mb-20">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-scissors-and-comb text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Moustache Trim</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center mb-sm-20">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-hairdresser-with-combs text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Moustache Trim</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center mb-sm-20">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-long-female-hair-tincture text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Moustache Trim</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center mb-sm-0">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-hair-straightener-on-long-female-hair text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Moustache Trim</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="icon-box text-center mb-sm-0">
-                            <a href="index-mp-layout2.html#" class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl">
-                                <i class="flaticon-salon-hairdryer-and-comb text-white"></i>
-                            </a>
-                            <h4 class="icon-box-title mt-15 mb-10 letter-space-4 text-uppercase"><strong>Moustache Trim</strong></h4>
-                            <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-                        </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row ml-md-0">
+                    <div class="owl-carousel-3col" data-nav="true">
+                        {% set teams = field_render('teams', 'page') %}
+                        {% for team in teams %}
+                            <div class="item">
+                                <div class="trainer-item">
+                                    <div class="trainer-thumb"><img src="{{ img(team.image.path) }}" alt="{{ team.image.alt }}"
+                                                                    class="img-fullwidth img-responsive"></div>
+                                    <div class="trainer-info">
+                                        <div class="trainer-biography">
+                                            <h3 class="text-white">{{ team.name }}</h3>
+                                            <h5 class="text-white">{{ team.description }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section: Clients -->
+    <section class="divider parallax layer-overlay overlay-dark"  data-bg-img="{{ img(field_render('partners_background','page').path) }}" data-parallax-ratio="0.7" >
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="owl-carousel-6col clients-logo carousel">
+                        {% set partners = field_render('partners', 'page') %}
+                        {% for partner in partners %}
+                            <div class="item">
+                                <a>
+                                    <img src="{{ img(partner.image.path) }}" alt="{{ partner.image.alt }}">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: News & Blog -->
+    <section id="news">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ content_render('list_home_news') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
 

@@ -13,7 +13,7 @@ class LoadNavigation extends AbstractFixture implements DependentFixtureInterfac
     
     protected $data = [
         'heliotrope-menu' => [
-            'name' => 'Menu',
+            'name' => 'Menu du haut',
             'website' => 'heliotrope-society'
         ]
     ];

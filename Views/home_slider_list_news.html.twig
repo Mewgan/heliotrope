@@ -1,0 +1,34 @@
+<div class="owl-carousel-3col owl-carousel">
+    {% for post in posts %}
+        {% set params = {} %}
+        {% for arg in args %}
+            {% if arg.value != '' %}
+                {% set params = params|merge({(arg.route):arg.value}) %}
+            {% else %}
+                {% if arg.alias == 'p' %}
+                    {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
+                {% elseif arg.alias == 'c' %}
+                    {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+    <div class="item">
+        <article class="post clearfix maxwidth600 mb-sm-30">
+            <div class="entry-header">
+                <div class="post-thumb thumb"> <img class="img-responsive img-fullwidth" alt="{{ post.thumbnail.alt }}" src="{{ img(post.thumbnail.path) }}"> </div>
+            </div>
+            <div class="entry-content border-1px p-20">
+                <h5 class="entry-title mt-0 pt-0 text-uppercase letter-space-2"><a href="{{ link(route,params) }}">{{ post.title }}</a></h5>
+                <p class="text-left mb-20 mt-15 font-13">{{ post.description }}</p>
+                <a href="{{ link(route,params) }}" class="btn btn-flat btn-dark btn-theme-colored btn-sm pull-left">Voir plus</a>
+                <ul class="list-inline entry-date pull-right font-12 mt-5">
+                    <li> {{ post.updated_at | date("d FY") }}</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </article>
+    </div>
+
+    {% endfor %}
+</div>

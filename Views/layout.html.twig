@@ -85,9 +85,9 @@
     {% endblock %}
 </head>
 <body class="{% if field_render('layout_mode') == 'boxed' %}boxed-layout bg-gray-light pt-40 pb-40 p-sm-0{% endif %}">
-{% set salon = data_render('Jet\\Models\\Society', ['s.name']) %}
+
+{% set salon = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
 {% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
-{% set account = data_render('Jet\\Models\\Account', ['a.phone','a.email']) %}
 {% set opening_hours = field_render('opening_hours') %}
 {% set logo = field_render('logo') %}
 {% set booking_link = field_render('booking_link') %}
@@ -129,10 +129,10 @@
                             <div class="widget m-0 mt-5 no-border">
                                 <ul class="list-inline text-left sm-text-center">
                                     <li class="pl-10 pr-10 mb-0 pb-0">
-                                        <div class="header-widget text-white"><i class="fa fa-phone"></i> {{ account.phone }} </div>
+                                        <div class="header-widget text-white"><i class="fa fa-phone"></i> {{ salon.phone }} </div>
                                     </li>
                                     <li class="pl-10 pr-10 mb-0 pb-0">
-                                        <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> {{ account.email }}</div>
+                                        <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> {{ salon.email }}</div>
                                     </li>
                                 </ul>
                             </div>
@@ -183,9 +183,9 @@
                             <br/>{{ address.country }}</p>
                         <ul class="list-inline mt-5">
                             <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i> <a
-                                        class="text-gray">{{ account.phone }}</a></li>
+                                        class="text-gray">{{ salon.phone }}</a></li>
                             <li class="m-0 pl-10 pr-10"><i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a
-                                        class="text-gray" href="mailto:{{ account.email }}">{{ account.email }}</a></li>
+                                        class="text-gray" href="mailto:{{ salon.email }}">{{ salon.email }}</a></li>
                         </ul>
                     </div>
                 </div>
