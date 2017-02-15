@@ -40,6 +40,24 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'dynamic'
         ],
+        'society-heliotrope-service' =>  [
+            'title' => 'Service',
+            'route' => 'module:post.type:static.action:list.name:service',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
+        ],
+        'society-heliotrope-actualite' =>  [
+            'title' => 'Actualité',
+            'route' => 'module:post.type:static.action:list.name:actualite',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
+        ],
         'society-heliotrope-gallery' =>  [
             'title' => 'Galerie',
             'route' => 'module:gallery.type:static.action:all',

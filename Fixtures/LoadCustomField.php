@@ -55,7 +55,7 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Heliotrope Website'
         ],
         'Heliotrope Page' => [
-            'title' => 'Page',
+            'title' => 'Header',
             'rule' => 'publication_type_rule',
             'operation' => '=',
             'value' => 'page',

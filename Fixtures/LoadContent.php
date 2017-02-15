@@ -170,6 +170,74 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
+        'heliotrope_list_Service_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Services',
+            'block' => 'list_post',
+            'website' => 'heliotrope-society',
+            'module' => 'module_post_list',
+            'template' => 'heliotrope_post_list_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-service',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['service'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        'heliotrope_list_actualite_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Actualités',
+            'block' => 'list_post',
+            'website' => 'heliotrope-society',
+            'module' => 'module_post_list',
+            'template' => 'heliotrope_post_list_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-actualite',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['actualite'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
         'heliotrope_list_post_content' => [
             'cat_mod' => 'post',
             'name' => 'Liste d\'articles',

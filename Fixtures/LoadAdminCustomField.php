@@ -276,7 +276,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Page */
         'heliotrope_page' => [
             'scope' => 'specified',
-            'title' => 'Image du header',
+            'title' => 'Image du bandeau du haut (Header)',
             'name' => 'subheader',
             'type' => 'media',
             'position' => 0,
@@ -288,6 +288,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => [
                 'page@society-heliotrope-home' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg9.jpg',
                 'page@society-heliotrope-list-post' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
+                'page@society-heliotrope-service' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
+                'page@society-heliotrope-actualite' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
                 'page@society-heliotrope-single-post' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg2.jpg',
                 'page@society-heliotrope-price' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg3.jpg',
                 'page@society-heliotrope-gallery' => '/src/Themes/Heliotrope/Resources/public/img/bg/bg4.jpg',
@@ -417,7 +419,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'heliotrope_homepage_partners_image' => [
             'scope' => 'specified',
-            'title' => 'Images du slider',
+            'title' => 'Image',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
@@ -440,7 +442,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Homepage slider */
         'heliotrope_homepage_slider' => [
             'scope' => 'specified',
-            'title' => 'Slider',
+            'title' => 'Bandeau défilant (Slider)',
             'name' => 'homepage_slider',
             'type' => 'repeater',
             'position' => 0,
@@ -454,7 +456,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'heliotrope_homepage_slider_img' => [
             'scope' => 'specified',
-            'title' => 'Images du slider',
+            'title' => 'Image',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
@@ -663,7 +665,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'heliotrope_homepage_slider_opening_background' => [
             'scope' => 'specified',
-            'title' => 'Image du background',
+            'title' => 'Image du bandeau du haut (Header)',
             'name' => 'background_opening_hours',
             'type' => 'media',
             'position' => 1,
@@ -764,7 +766,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'heliotrope_homepage_slider_partners_image' => [
             'scope' => 'specified',
-            'title' => 'Images du slider',
+            'title' => 'Image',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
@@ -786,7 +788,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'heliotrope_homepage_slider_partners_background' => [
             'scope' => 'specified',
-            'title' => 'Image du background pour les partenaires',
+            'title' => 'Image de fond pour les partenaires',
             'name' => 'partners_background',
             'type' => 'media',
             'position' => 6,
