@@ -299,7 +299,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Homepage */
         'heliotrope_homepage_header_text' => [
             'scope' => 'specified',
-            'title' => 'Texte du header',
+            'title' => 'Texte du bandeau du haut (Header)',
             'name' => 'homepage_header_text',
             'type' => 'wysiwyg',
             'position' => 0,
@@ -347,7 +347,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'heliotrope_team' => [
             'scope' => 'specified',
-            'title' => 'Equipes',
+            'title' => 'Equipe',
             'name' => 'teams',
             'type' => 'repeater',
             'position' => 3,
