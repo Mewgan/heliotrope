@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="{% block description %}{% endblock %}"/>
-        {{ debug_bar_header()|raw }}
         <!-- Page Title -->
         <title>{% block title %}{% endblock %}</title>
 
@@ -229,7 +228,6 @@
 <script defer src="{{ asset('libs/lazysizes/lazysizes.min.js') }}"></script>
 <!-- JS | Custom script for all pages -->
 <script src="{{ theme_asset('custom.js') }}"></script>
-{{ debug_bar_footer()|raw }}
 {% for library in data.libraries %}
     {% if library.category == 'js' %}
         {% if library.type == 'file' %}
