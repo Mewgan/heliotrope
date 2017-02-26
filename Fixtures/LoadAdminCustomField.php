@@ -16,6 +16,39 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
 
     protected $data = [
         /* Heliotrope fields */
+        'heliotrope_seo_title' => [
+            'scope' => 'specified',
+            'title' => 'Meta titre',
+            'name' => 'meta_title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Seo',
+            'data' => [],
+            'content' => []
+        ],
+        'heliotrope_seo_description' => [
+            'scope' => 'specified',
+            'title' => 'Meta description',
+            'name' => 'meta_description',
+            'type' => 'textarea',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Heliotrope Seo',
+            'data' => [],
+            'content' => []
+        ],
+        'heliotrope_seo_keywords' => [
+            'scope' => 'specified',
+            'title' => 'Meta mots clef',
+            'name' => 'meta_keywords',
+            'type' => 'string',
+            'position' => 2,
+            'parent' => null,
+            'cf' => 'Heliotrope Seo',
+            'data' => [],
+            'content' => []
+        ],
         'heliotrope_logo' => [
             'scope' => 'global',
             'title' => 'Logo',
