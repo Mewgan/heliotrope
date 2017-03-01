@@ -12,10 +12,8 @@
             <div class="display-table-cell">
                 <div class="container pt-200 pb-200">
                     <div class="row">
-                        <div class="col-md-12 text-{{ field_render('homepage_header_text_align', 'page') }}">
-                            {{ field_render('homepage_header_text', 'page') | raw }}
-                            <a href="{{ booking_link }}"
-                               class="btn btn-theme-colored btn-circled btn-lg smooth-scroll-to-target mt-10">Réserver</a>
+                        <div class="col-md-12">
+                            {{ include(template_from_string(field_render('homepage_header_text', 'page'))) | raw }}
                         </div>
                     </div>
                 </div>

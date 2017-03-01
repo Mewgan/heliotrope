@@ -12,12 +12,12 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
     use LoadFixture;
 
     protected $data = [
-        'Heliotrope Seo' => [
-            'title' => 'SEO',
-            'rule' => 'everywhere_rule',
+        'Heliotrope Default Global' => [
+            'title' => 'Données globales',
+            'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
-            'website' => 'Heliotrope Website',
+            'website' => 'Heliotrope Website'
         ],
         'Heliotrope Specific Global' => [
             'title' => 'Données spécifique au thème',
@@ -26,12 +26,34 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'value' => null,
             'website' => 'Heliotrope Website'
         ],
-        'Heliotrope Default Global' => [
-            'title' => 'Données globales',
+        'Heliotrope Global Seo' => [
+            'title' => 'SEO',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
             'website' => 'Heliotrope Website'
+        ],
+        'Heliotrope Social Network' => [
+            'title' => 'Réseaux sociaux',
+            'rule' => 'global_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Heliotrope Website'
+        ],
+        'Heliotrope Custom Css & Js' => [
+            'title' => 'Css & Js',
+            'rule' => 'global_rule',
+            'operation' => '=',
+            'value' => null,
+            'access_level' => 2,
+            'website' => 'Heliotrope Website',
+        ],
+        'Heliotrope Seo' => [
+            'title' => 'SEO',
+            'rule' => 'everywhere_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Heliotrope Website',
         ],
         'Heliotrope Page' => [
             'title' => 'Header',
@@ -48,11 +70,11 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Heliotrope Website'
         ],
         'Heliotrope Home Page Slider' => [
-            'title' => 'Page d\'accueil avec slider',
+            'title' => 'Page d\'accueil',
             'rule' => 'page_rule',
             'operation' => '=',
             'reference' => 'society-heliotrope-home-slider',
-            'website' => 'Heliotrope Website'
+            'website' => 'Heliotrope Slider Website'
         ],
         'Heliotrope Price Page' => [
             'title' => 'Tarif',

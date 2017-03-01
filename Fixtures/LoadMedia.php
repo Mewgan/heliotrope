@@ -20,6 +20,14 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Theme heliotrope thumbnail'
         ],
         [
+            'title' => 'Theme heliotrope slider thumbnail',
+            'path' => '/public/media/thumbnail/theme-heliotrope-slider-thumbnail.png',
+            'type' => 'image/png',
+            'size' => 137577,
+            'access_level' => 2,
+            'alt' => 'Theme heliotrope slider thumbnail'
+        ],
+        [
             'title' => 'Logo theme heliotrope',
             'path' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
             'type' => 'image/png',

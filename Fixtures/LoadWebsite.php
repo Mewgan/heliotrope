@@ -15,7 +15,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
         'Heliotrope Website' => [
             'society' => 'Heliotrope Society',
             'domain' => 'heliotrope-society',
-            'theme' =>  'Heliotrope',
+            'theme' => 'Heliotrope',
             'layout' => 'heliotrope_layout',
             'render_system' => 'php',
             'logo' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
@@ -29,10 +29,8 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_layout',
                 'heliotrope_page_layout',
                 'heliotrope_home_page_layout',
-                'heliotrope_home_page_slider_layout',
                 'heliotrope_home_list_service_partial',
                 'heliotrope_home_list_news_partial',
-                'heliotrope_home_slider_list_news_partial',
                 'heliotrope_navigation_partial',
                 'heliotrope_post_list_partial',
                 'heliotrope_single_post_partial',
@@ -91,10 +89,34 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'parent_replace' => [],
             ]
         ],
+        'Heliotrope Slider Website' => [
+            'society' => 'Heliotrope Slider Society',
+            'domain' => 'heliotrope-slider-society',
+            'theme' =>  'Heliotrope',
+            'layout' => 'heliotrope_layout',
+            'render_system' => 'php',
+            'modules' => [
+                'navigation',
+                'list-post',
+                'single-post',
+                'grid-editor',
+            ],
+            'templates' => [
+                'heliotrope_home_page_slider_layout',
+                'heliotrope_home_slider_list_news_partial',
+            ],
+            'medias' => [
+                '/public/media/thumbnail/theme-heliotrope-slider-thumbnail.png',
+            ],
+            'data' => [
+                'parent_exclude' => [],
+                'parent_replace' => [],
+            ]
+        ],
         'Sanji Website' => [
             'society' => 'Sanji Society',
             'domain' => 'sanji-society',
-            'theme' =>  'Heliotrope',
+            'theme' => 'Heliotrope',
             'logo' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
             'layout' => 'heliotrope_layout',
             'render_system' => 'php',
@@ -115,7 +137,9 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-        $this->loadWebsite($manager, 'Heliotrope Website');
+        $this->loadWebsite($manager);
+        $this->setThemeWebsite($manager, 'Heliotrope', 'Heliotrope Website');
+        $this->setThemeWebsite($manager, 'Heliotrope Slider', 'Heliotrope Slider Website');
     }
 
     /**

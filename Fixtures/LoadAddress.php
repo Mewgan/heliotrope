@@ -13,11 +13,18 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
     use LoadFixture;
 
     protected $data = [
-        'heliotrope' => [
+        'heliotrope-address' => [
             'address' => '17 Rue Portefoin',
             'city' => 'Paris 3',
             'postal_code' => '75003',
             'society' => 'Heliotrope Society', //name from LoadSociety class
+            'country' => 'FRANCE',
+        ],
+        'heliotrope-slider-address' => [
+            'address' => '29 Rue Jean Jeaures',
+            'city' => 'Champigny Sur Marne',
+            'postal_code' => '94500',
+            'society' => 'Heliotrope Slider Society', //name from LoadSociety class
             'country' => 'FRANCE',
         ],
         'sanji-address' => [

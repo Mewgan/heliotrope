@@ -76,16 +76,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-heliotrope-home-slider' =>  [
-            'title' => 'Accueil Slider',
-            'route' => 'home',
-            'website' => 'Heliotrope Website',
-            'layout' => 'heliotrope_home_page_slider_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static',
-            'published' => false
-        ],
         'society-heliotrope-home' =>  [
             'title' => 'Accueil',
             'route' => 'home',
@@ -94,6 +84,16 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
+        ],
+        /* Slider Homepage */
+        'society-heliotrope-home-slider' =>  [
+            'title' => 'Accueil',
+            'route' => 'home',
+            'website' => 'Heliotrope Slider Website',
+            'layout' => 'heliotrope_home_page_slider_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
         ],
     ];
 

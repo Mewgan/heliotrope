@@ -106,7 +106,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'cat_mod' => 'post',
             'name' => 'Liste de services',
             'block' => 'list_home_service',
-            'website' => 'heliotrope-society',
+            'website' => 'heliotrope-slider-society',
             'module' => 'module_post_list',
             'template' => 'heliotrope_home_list_service_partial',
             'section' => null,
@@ -140,7 +140,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'cat_mod' => 'post',
             'name' => 'Liste d\'actualités',
             'block' => 'list_home_news',
-            'website' => 'heliotrope-society',
+            'website' => 'heliotrope-slider-society',
             'module' => 'module_post_list',
             'template' => 'heliotrope_home_slider_list_news_partial',
             'section' => null,
@@ -170,7 +170,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
-        'heliotrope_list_Service_content' => [
+        'heliotrope_list_service_content' => [
             'cat_mod' => 'post',
             'name' => 'Services',
             'block' => 'list_post',

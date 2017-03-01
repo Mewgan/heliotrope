@@ -18,6 +18,12 @@ class LoadTheme extends AbstractFixture implements DependentFixtureInterface
             'profession' => 'barber',
             'thumbnail' => '/public/media/thumbnail/theme-heliotrope-thumbnail.png',
             'state' => 1,
+        ],
+        [
+            'name' => 'Heliotrope Slider',
+            'profession' => 'barber',
+            'thumbnail' => '/public/media/thumbnail/theme-heliotrope-slider-thumbnail.png',
+            'state' => 1,
         ]
     ];
 

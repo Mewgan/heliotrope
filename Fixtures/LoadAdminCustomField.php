@@ -49,6 +49,94 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => []
         ],
+        /* Global CSS and JS */
+        'heliotrope_css' => [
+            'scope' => 'global',
+            'title' => 'Css',
+            'name' => 'css_block',
+            'type' => 'editor',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Custom Css & Js',
+            'data' => [
+                'file_type' => 'css'
+            ],
+            'content' => ['value' => '']
+        ],
+        'heliotrope_js' => [
+            'scope' => 'global',
+            'title' => 'Javascript',
+            'name' => 'js_block',
+            'type' => 'editor',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Heliotrope Custom Css & Js',
+            'data' => [
+                'file_type' => 'javascript'
+            ],
+            'content' => ['value' => '']
+        ],
+        /* Global social network */
+        'heliotrope_social' => [
+            'scope' => 'global',
+            'title' => 'Réseaux sociaux',
+            'name' => 'social_networks',
+            'type' => 'repeater',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Social Network',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows' => [0, 1]
+            ]
+        ],
+        'heliotrope_social_name' => [
+            'scope' => 'global',
+            'title' => 'Nom',
+            'name' => 'name',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'heliotrope_social',
+            'cf' => 'Heliotrope Social Network',
+            'data' => [],
+            'content' => [
+                'value' => [
+                    'Facebook',
+                    'Twitter',
+                ]
+            ]
+        ],
+        'heliotrope_social_link' => [
+            'scope' => 'global',
+            'title' => 'Lien',
+            'name' => 'link',
+            'type' => 'string',
+            'position' => 1,
+            'parent' => 'heliotrope_social',
+            'cf' => 'Heliotrope Social Network',
+            'data' => [],
+            'content' => [
+                'value' => [
+                    '#',
+                    '#',
+                ]
+            ]
+        ],
+        /* Global seo */
+        'heliotrope_global_seo_analytics' => [
+            'scope' => 'global',
+            'title' => 'Google | Analytics',
+            'name' => 'meta_title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => null,
+            'description' => 'Renseigner votre script analytics',
+            'cf' => 'Heliotrope Global Seo',
+            'data' => [],
+            'content' => []
+        ],
+        /* Global */
         'heliotrope_logo' => [
             'scope' => 'global',
             'title' => 'Logo',
@@ -99,58 +187,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                                 </li>
                             </ul>']
         ],
-        'heliotrope_social' => [
-            'scope' => 'global',
-            'title' => 'Réseaux sociaux',
-            'name' => 'social_networks',
-            'type' => 'repeater',
-            'position' => 2,
-            'parent' => null,
-            'cf' => 'Heliotrope Default Global',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows' => [0, 1]
-            ]
-        ],
-        'heliotrope_social_name' => [
-            'scope' => 'global',
-            'title' => 'Nom',
-            'name' => 'name',
-            'type' => 'string',
-            'position' => 0,
-            'parent' => 'heliotrope_social',
-            'cf' => 'Heliotrope Default Global',
-            'data' => [],
-            'content' => [
-                'value' => [
-                    'Facebook',
-                    'Twitter',
-                ]
-            ]
-        ],
-        'heliotrope_social_link' => [
-            'scope' => 'global',
-            'title' => 'Lien',
-            'name' => 'link',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'heliotrope_social',
-            'cf' => 'Heliotrope Default Global',
-            'data' => [],
-            'content' => [
-                'value' => [
-                    '#',
-                    '#',
-                ]
-            ]
-        ],
         'heliotrope_booking' => [
             'scope' => 'global',
             'title' => 'Lien du rendez-vous en ligne',
             'name' => 'booking_link',
             'type' => 'string',
-            'position' => 3,
+            'position' => 2,
             'parent' => null,
             'cf' => 'Heliotrope Default Global',
             'data' => [],
@@ -346,31 +388,13 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
              '
             ]
         ],
-        'heliotrope_homepage_header_text_align' => [
-            'scope' => 'specified',
-            'title' => 'Aligner le texte à',
-            'name' => 'homepage_header_text_align',
-            'type' => 'select',
-            'position' => 1,
-            'parent' => null,
-            'cf' => 'Heliotrope Home Page',
-            'data' => [
-                'contents' => [
-                    ['key' => 'left', 'value' => 'Gauche'],
-                    ['key' => 'center', 'value' => 'Centre'],
-                    ['key' => 'right', 'value' => 'Droite'],
-                ],
-                'multiple' => false
-            ],
-            'content' => ['page@society-heliotrope-home' => 'right']
-        ],
         'heliotrope_homepage_about_us' => [
             'scope' => 'specified',
             'title' => 'Article',
             'name' => 'homepage_about_us',
             'type' => 'post',
             'website' => 'Aster Website',
-            'position' => 2,
+            'position' => 1,
             'parent' => null,
             'cf' => 'Heliotrope Home Page',
             'data' => [
@@ -383,7 +407,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Equipe',
             'name' => 'teams',
             'type' => 'repeater',
-            'position' => 3,
+            'position' => 2,
             'parent' => null,
             'cf' => 'Heliotrope Home Page',
             'data' => [],
@@ -441,7 +465,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Partenaire',
             'name' => 'partners',
             'type' => 'repeater',
-            'position' => 4,
+            'position' => 3,
             'parent' => null,
             'cf' => 'Heliotrope Home Page',
             'data' => [],

@@ -19,6 +19,12 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
+            'name' => 'Heliotrope Slider Society',
+            'email' => 'contact@heliotrope-slider.com',
+            'phone' => '0123456789',
+            'account' => 'sumugan.sinnarasa@desico.fr'
+        ],
+        [
             'name' => 'Sanji Society',
             'email' => 'contact@sanji.com',
             'phone' => '0123456789',
