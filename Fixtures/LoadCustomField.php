@@ -27,7 +27,7 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Heliotrope Website'
         ],
         'Heliotrope Global Seo' => [
-            'title' => 'SEO',
+            'title' => 'SEO Global',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
@@ -46,13 +46,6 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'operation' => '=',
             'value' => null,
             'access_level' => 2,
-            'website' => 'Heliotrope Website',
-        ],
-        'Heliotrope Seo' => [
-            'title' => 'SEO',
-            'rule' => 'everywhere_rule',
-            'operation' => '=',
-            'value' => null,
             'website' => 'Heliotrope Website',
         ],
         'Heliotrope Page' => [
@@ -89,7 +82,14 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'operation' => '=',
             'reference' => 'society-heliotrope-gallery',
             'website' => 'Heliotrope Website'
-        ]
+        ],
+        'Heliotrope Seo' => [
+            'title' => 'SEO',
+            'rule' => 'everywhere_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Heliotrope Website',
+        ],
     ];
 
     public function load(ObjectManager $manager)

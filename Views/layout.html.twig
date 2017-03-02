@@ -80,6 +80,7 @@
             body{
                 font-family: {{ body_font[0] | raw }}
             }
+            {{ field_render('css_block') }}
         </style>
 
     {% endblock %}
@@ -239,5 +240,8 @@
     {% endif %}
 {% endfor %}
 {% block js %}{% endblock %}
+<script>
+    {{ field_render('js_block') | raw }}
+</script>
 </body>
 </html>
