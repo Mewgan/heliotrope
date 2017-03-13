@@ -13,15 +13,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         /* Aster pages */
-        'society-heliotrope-price' =>  [
-            'title' => 'Tarif',
-            'route' => 'module:price.type:static.action:all',
-            'website' => 'Heliotrope Website',
-            'layout' => 'heliotrope_price_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static',
-        ],
         'society-heliotrope-single-post' =>  [
             'title' => 'Page d\'un article',
             'route' => 'module:post.type:dynamic.action:read',
@@ -40,18 +31,18 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'dynamic'
         ],
+        'society-heliotrope-price' =>  [
+            'title' => 'Tarif',
+            'route' => 'module:price.type:static.action:all',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_price_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static',
+        ],
         'society-heliotrope-service' =>  [
             'title' => 'Service',
             'route' => 'module:post.type:static.action:list.name:service',
-            'website' => 'Heliotrope Website',
-            'layout' => 'heliotrope_page_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static'
-        ],
-        'society-heliotrope-actualite' =>  [
-            'title' => 'Actualité',
-            'route' => 'module:post.type:static.action:list.name:actualite',
             'website' => 'Heliotrope Website',
             'layout' => 'heliotrope_page_layout',
             'stylesheets' => [],
@@ -75,6 +66,15 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
+        ],
+        'society-heliotrope-actualite' =>  [
+            'title' => 'Actualité',
+            'route' => 'module:post.type:static.action:list.name:actualite',
+            'website' => 'Heliotrope Website',
+            'layout' => 'heliotrope_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
         ],
         'society-heliotrope-home' =>  [
             'title' => 'Accueil',

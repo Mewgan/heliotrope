@@ -294,6 +294,35 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ]
             ]
         ],
+        /* Team */
+        'heliotrope_home_team_content' => [
+            'cat_mod' => 'team',
+            'name' => 'Équipe',
+            'block' => 'team',
+            'website' => 'heliotrope-society',
+            'module' => 'module_team',
+            'template' => 'heliotrope_team_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-home',
+            'data' => [
+                'class' => '',
+                'roles' => []
+            ]
+        ],
+        'heliotrope_home_slider_team_content' => [
+            'cat_mod' => 'team',
+            'name' => 'Équipe',
+            'block' => 'team',
+            'website' => 'heliotrope-society',
+            'module' => 'module_team',
+            'template' => 'heliotrope_team_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-home-slider',
+            'data' => [
+                'class' => '',
+                'roles' => []
+            ]
+        ],
     ];
 
     public function load(ObjectManager $manager)
@@ -320,6 +349,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'Jet\Themes\Heliotrope\Fixtures\LoadTemplate',
             'Jet\Modules\Post\Fixtures\LoadPostModule',
             'Jet\Modules\Navigation\Fixtures\LoadNavigationModule',
+            'Jet\Modules\Team\Fixtures\LoadTeamModule',
         ];
     }
 }

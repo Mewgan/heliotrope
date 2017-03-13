@@ -402,72 +402,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             'content' => ['page@society-heliotrope-home' => 'heliotrope-about-us']
         ],
-        'heliotrope_team' => [
-            'scope' => 'specified',
-            'title' => 'Equipe',
-            'name' => 'teams',
-            'type' => 'repeater',
-            'position' => 2,
-            'parent' => null,
-            'cf' => 'Heliotrope Home Page',
-            'data' => [
-                'disposition' => 'col'
-            ],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-heliotrope-home' => [0, 1, 2, 3, 4]
-            ]
-        ],
-        'heliotrope_team_image' => [
-            'scope' => 'specified',
-            'title' => 'Image',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'heliotrope_team',
-            'cf' => 'Heliotrope Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-heliotrope-home' => [
-                '/src/Themes/Heliotrope/Resources/public/img/team/1.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/2.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/3.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/4.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/5.png',
-            ]
-            ]
-        ],
-        'heliotrope_team_name' => [
-            'scope' => 'specified',
-            'title' => 'Nom',
-            'name' => 'name',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'heliotrope_team',
-            'cf' => 'Heliotrope Home Page',
-            'data' => [],
-            'content' => ['page@society-heliotrope-home' => ['Briana', 'Jessica', 'Rachel', 'Emma', 'Delphine'],
-            ]
-        ],
-        'heliotrope_team_description' => [
-            'scope' => 'specified',
-            'title' => 'Description',
-            'name' => 'description',
-            'type' => 'string',
-            'position' => 2,
-            'parent' => 'heliotrope_team',
-            'cf' => 'Heliotrope Home Page',
-            'data' => [],
-            'content' => ['page@society-heliotrope-home' => ['Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert']
-            ]
-        ],
         'heliotrope_homepage_partners' => [
             'scope' => 'specified',
             'title' => 'Partenaire',
             'name' => 'partners',
             'type' => 'repeater',
-            'position' => 3,
+            'position' => 2,
             'parent' => null,
             'cf' => 'Heliotrope Home Page',
             'data' => [],
@@ -751,72 +691,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             'content' => ['page@society-heliotrope-home-slider' => 'heliotrope-about-us']
         ],
-        'heliotrope_homepage_slider_team' => [
-            'scope' => 'specified',
-            'title' => 'Equipes',
-            'name' => 'teams',
-            'type' => 'repeater',
-            'position' => 3,
-            'parent' => null,
-            'cf' => 'Heliotrope Home Page Slider',
-            'data' => [
-                'disposition' => 'col'
-            ],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-heliotrope-home-slider' => [0, 1, 2, 3, 4]
-            ]
-        ],
-        'heliotrope_homepage_slider_team_image' => [
-            'scope' => 'specified',
-            'title' => 'Image',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'heliotrope_homepage_slider_team',
-            'cf' => 'Heliotrope Home Page Slider',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-heliotrope-home-slider' => [
-                '/src/Themes/Heliotrope/Resources/public/img/team/1.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/2.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/3.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/4.png',
-                '/src/Themes/Heliotrope/Resources/public/img/team/5.png',
-            ]
-            ]
-        ],
-        'heliotrope_homepage_slider_team_name' => [
-            'scope' => 'specified',
-            'title' => 'Nom',
-            'name' => 'name',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'heliotrope_homepage_slider_team',
-            'cf' => 'Heliotrope Home Page Slider',
-            'data' => [],
-            'content' => ['page@society-heliotrope-home-slider' => ['Briana', 'Jessica', 'Rachel', 'Emma', 'Delphine'],
-            ]
-        ],
-        'heliotrope_homepage_slider_team_description' => [
-            'scope' => 'specified',
-            'title' => 'Description',
-            'name' => 'description',
-            'type' => 'string',
-            'position' => 2,
-            'parent' => 'heliotrope_homepage_slider_team',
-            'cf' => 'Heliotrope Home Page Slider',
-            'data' => [],
-            'content' => ['page@society-heliotrope-home-slider' => ['Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert', 'Hair Expert']
-            ]
-        ],
         'heliotrope_homepage_slider_partners' => [
             'scope' => 'specified',
             'title' => 'Partenaire',
             'name' => 'partners',
             'type' => 'repeater',
-            'position' => 4,
+            'position' => 3,
             'parent' => null,
             'cf' => 'Heliotrope Home Page Slider',
             'data' => [],
@@ -852,7 +732,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Image de fond pour les partenaires',
             'name' => 'partners_background',
             'type' => 'media',
-            'position' => 6,
+            'position' => 4,
             'parent' => null,
             'cf' => 'Heliotrope Home Page Slider',
             'data' => [

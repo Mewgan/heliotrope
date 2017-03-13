@@ -116,6 +116,14 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'heliotrope_team_partial' => [
+            'name' => 'ThemeHeliotropeTeamFilePartial',
+            'title' => 'Theme Heliotrope Team Template',
+            'content' => 'Heliotrope/Views/team',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
     ];
 
     public function load(ObjectManager $manager)
