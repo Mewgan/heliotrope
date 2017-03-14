@@ -41,7 +41,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_team_partial',
             ],
             'medias' => [
-                '/public/media/thumbnail/theme-heliotrope-thumbnail.png',
+                '/public/media/default/thumbnail/theme-heliotrope-thumbnail.png',
                 '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
                 '/src/Themes/Heliotrope/Resources/public/img/logo-wide.png',
                 '/src/Themes/Heliotrope/Resources/public/img/bg/bg1.jpg',
@@ -109,7 +109,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_home_slider_list_news_partial',
             ],
             'medias' => [
-                '/public/media/thumbnail/theme-heliotrope-slider-thumbnail.png',
+                '/public/media/default/thumbnail/theme-heliotrope-slider-thumbnail.png',
             ],
             'data' => [
                 'parent_exclude' => [],

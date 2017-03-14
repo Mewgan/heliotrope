@@ -13,7 +13,7 @@ class LoadMedia extends AbstractFixture
     protected $data = [
         [
             'title' => 'Theme heliotrope thumbnail',
-            'path' => '/public/media/thumbnail/theme-heliotrope-thumbnail.png',
+            'path' => '/public/media/default/thumbnail/theme-heliotrope-thumbnail.png',
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,
@@ -21,7 +21,7 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Theme heliotrope slider thumbnail',
-            'path' => '/public/media/thumbnail/theme-heliotrope-slider-thumbnail.png',
+            'path' => '/public/media/default/thumbnail/theme-heliotrope-slider-thumbnail.png',
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,
