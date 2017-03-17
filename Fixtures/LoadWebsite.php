@@ -25,6 +25,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [
                 'heliotrope_layout',
@@ -36,6 +37,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_post_list_partial',
                 'heliotrope_home_list_service_partial',
                 'heliotrope_home_list_news_partial',
+                'heliotrope_home_list_partners_partial',
                 'heliotrope_single_post_partial',
                 'heliotrope_navigation_partial',
                 'heliotrope_team_partial',
@@ -103,6 +105,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [
                 'heliotrope_home_page_slider_layout',
@@ -129,6 +132,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [],
             'medias' => [],

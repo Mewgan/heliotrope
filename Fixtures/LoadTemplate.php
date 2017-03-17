@@ -92,6 +92,14 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'heliotrope_home_list_partners_partial' => [
+            'name' => 'ThemeHeliotropeHomePartnersListFilePartial',
+            'title' => 'Theme Heliotrope Home Partners List Template',
+            'content' => 'Heliotrope/Views/partner_list_news',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
         'heliotrope_price_layout' => [
             'name' => 'ThemeHeliotropePriceFileLayout',
             'title' => 'Theme Heliotrope Price Template',

@@ -323,6 +323,75 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 'roles' => []
             ]
         ],
+        /* Partners */
+        'heliotrope_home_partner_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Partenaires',
+            'block' => 'list_home_partners',
+            'website' => 'heliotrope-society',
+            'module' => 'module_post_list',
+            'template' => 'heliotrope_home_list_partners_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-home',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['partenaire'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        'heliotrope_home_slider_partner_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Partenaires',
+            'block' => 'list_home_partners',
+            'website' => 'heliotrope-society',
+            'module' => 'module_post_list',
+            'template' => 'heliotrope_home_list_service_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-home',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['partenaire'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
     ];
 
     public function load(ObjectManager $manager)

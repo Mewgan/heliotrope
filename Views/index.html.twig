@@ -56,14 +56,7 @@
             <div class="section-content">
                 <div class="row">
                     <div class="owl-carousel-6col clients-logo carousel">
-                        {% set partners = field_render('partners', 'page') %}
-                        {% for partner in partners %}
-                            <div class="item">
-                                <a>
-                                    <img src="{{ img(partner.image.path) }}" alt="{{ partner.image.alt }}">
-                                </a>
-                            </div>
-                        {% endfor %}
+                        {{ content_render('list_home_partners') }}
                     </div>
                 </div>
             </div>

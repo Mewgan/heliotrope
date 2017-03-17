@@ -402,42 +402,6 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             'content' => ['page@society-heliotrope-home' => 'heliotrope-about-us']
         ],
-        'heliotrope_homepage_partners' => [
-            'scope' => 'specified',
-            'title' => 'Partenaire',
-            'name' => 'partners',
-            'type' => 'repeater',
-            'position' => 2,
-            'parent' => null,
-            'cf' => 'Heliotrope Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-heliotrope-home' => [0, 1, 2, 3, 4, 5, 6]
-            ]
-        ],
-        'heliotrope_homepage_partners_image' => [
-            'scope' => 'specified',
-            'title' => 'Image',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'heliotrope_homepage_partners',
-            'cf' => 'Heliotrope Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-heliotrope-home' => [
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-            ],
-            ]
-        ],
         /* Homepage slider */
         'heliotrope_homepage_slider' => [
             'scope' => 'specified',
@@ -691,48 +655,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             'content' => ['page@society-heliotrope-home-slider' => 'heliotrope-about-us']
         ],
-        'heliotrope_homepage_slider_partners' => [
-            'scope' => 'specified',
-            'title' => 'Partenaire',
-            'name' => 'partners',
-            'type' => 'repeater',
-            'position' => 3,
-            'parent' => null,
-            'cf' => 'Heliotrope Home Page Slider',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-heliotrope-home-slider' => [0, 1, 2, 3, 4, 5, 6]
-            ]
-        ],
-        'heliotrope_homepage_slider_partners_image' => [
-            'scope' => 'specified',
-            'title' => 'Image',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'heliotrope_homepage_slider_partners',
-            'cf' => 'Heliotrope Home Page Slider',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-heliotrope-home-slider' => [
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-                '/src/Themes/Heliotrope/Resources/public/img/clients/1.jpg',
-            ],
-            ]
-        ],
         'heliotrope_homepage_slider_partners_background' => [
             'scope' => 'specified',
             'title' => 'Image de fond pour les partenaires',
             'name' => 'partners_background',
             'type' => 'media',
-            'position' => 4,
+            'position' => 3,
             'parent' => null,
             'cf' => 'Heliotrope Home Page Slider',
             'data' => [

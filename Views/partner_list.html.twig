@@ -1,0 +1,7 @@
+{% for partner in posts %}
+    <div class="item">
+        <a>
+            <img src="{{ img(partner.thumbnail.path) }}" alt="{{ partner.thumbnail.alt }}">
+        </a>
+    </div>
+{% endfor %}
