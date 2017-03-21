@@ -100,14 +100,6 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'heliotrope_price_layout' => [
-            'name' => 'ThemeHeliotropePriceFileLayout',
-            'title' => 'Theme Heliotrope Price Template',
-            'content' => 'Heliotrope/Views/price_list',
-            'category' => 'layout',
-            'scope' => 'specified',
-            'type' => 'file'
-        ],
         'heliotrope_gallery_layout' => [
             'name' => 'ThemeHeliotropeGalleryFileLayout',
             'title' => 'Theme Heliotrope Gallery Template',
@@ -128,6 +120,14 @@ class LoadTemplate extends AbstractFixture
             'name' => 'ThemeHeliotropeTeamFilePartial',
             'title' => 'Theme Heliotrope Team Template',
             'content' => 'Heliotrope/Views/team',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'heliotrope_price_partial' => [
+            'name' => 'ThemeHeliotropePriceFilePartial',
+            'title' => 'Theme Heliotrope Price Template',
+            'content' => 'Heliotrope/Views/price',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'

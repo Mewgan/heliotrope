@@ -35,7 +35,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Tarif',
             'route' => 'module:price.type:static.action:all',
             'website' => 'Heliotrope Website',
-            'layout' => 'heliotrope_price_layout',
+            'layout' => 'heliotrope_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',

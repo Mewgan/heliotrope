@@ -1,0 +1,36 @@
+<!-- Section: Pricing -->
+{% for category in service_categories %}
+    <section class="pricing">
+        <div class="container">
+            <div class="section-content">
+                <div class="row mb-20">
+                    <h3 class="text-uppercase title line-bottom">{{ category.name }}</h3>
+                </div>
+                <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    {% for service in category.services %}
+                        <div class="col-md-4">
+                            <div class="pricing-table mb-30">
+                                <div class="package-type">
+                                    {#<div class="thumb pull-left mr-20 mb-20">
+                                        <img class="img-circle border-rounded border-8px" width="150" src="{{ img(service.image.path) }}" alt="{{ service.image.alt }}">
+                                    </div>#}
+                                    <div class="price pt-30">
+                                        <h5 class="text-uppercase letter-space-2">{{ service.title }}</h5>
+                                        <span class="font-weight-800 font-36 text-center text-theme-colored">{{ service.price }}</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="">
+                                        <p>{{ service.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if loop.index is divisible by(3) %}
+                            <div class="clearfix"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}

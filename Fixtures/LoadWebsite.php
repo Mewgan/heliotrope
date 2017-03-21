@@ -31,7 +31,6 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_layout',
                 'heliotrope_page_layout',
                 'heliotrope_home_page_layout',
-                'heliotrope_price_layout',
                 'heliotrope_gallery_layout',
                 'heliotrope_contact_layout',
                 'heliotrope_post_list_partial',
@@ -41,6 +40,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'heliotrope_single_post_partial',
                 'heliotrope_navigation_partial',
                 'heliotrope_team_partial',
+                'heliotrope_price_partial',
             ],
             'medias' => [
                 '/public/media/default/thumbnail/theme-heliotrope-thumbnail.png',

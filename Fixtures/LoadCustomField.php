@@ -69,13 +69,6 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'reference' => 'society-heliotrope-home-slider',
             'website' => 'Heliotrope Slider Website'
         ],
-        'Heliotrope Price Page' => [
-            'title' => 'Tarif',
-            'rule' => 'page_rule',
-            'operation' => '=',
-            'reference' => 'society-heliotrope-price',
-            'website' => 'Heliotrope Website'
-        ],
         'Heliotrope Gallery Page' => [
             'title' => 'Galerie',
             'rule' => 'page_rule',

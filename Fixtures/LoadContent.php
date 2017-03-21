@@ -306,6 +306,9 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'page' => 'society-heliotrope-home',
             'data' => [
                 'class' => '',
+                'member_in_role' => false,
+                'member' => true,
+                'role' => false,
                 'roles' => []
             ]
         ],
@@ -320,6 +323,9 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'page' => 'society-heliotrope-home-slider',
             'data' => [
                 'class' => '',
+                'member_in_role' => false,
+                'member' => true,
+                'role' => false,
                 'roles' => []
             ]
         ],
@@ -362,11 +368,11 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'cat_mod' => 'post',
             'name' => 'Partenaires',
             'block' => 'list_home_partners',
-            'website' => 'heliotrope-society',
+            'website' => 'heliotrope-slider-society',
             'module' => 'module_post_list',
-            'template' => 'heliotrope_home_list_service_partial',
+            'template' => 'heliotrope_home_list_partners_partial',
             'section' => null,
-            'page' => 'society-heliotrope-home',
+            'page' => 'society-heliotrope-home-slider',
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
@@ -392,6 +398,24 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
+        /* Price */
+        'heliotrope_price_content' => [
+            'cat_mod' => 'price',
+            'name' => 'Tarif',
+            'block' => 'price',
+            'website' => 'heliotrope-society',
+            'module' => 'module_price',
+            'template' => 'heliotrope_price_partial',
+            'section' => null,
+            'page' => 'society-heliotrope-price',
+            'data' => [
+                'class' => '',
+                'service_in_category' => true,
+                'service' => false,
+                'category' => true,
+                'roles' => []
+            ]
+        ]
     ];
 
     public function load(ObjectManager $manager)
