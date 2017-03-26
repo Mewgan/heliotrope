@@ -18,7 +18,7 @@ class LoadTeam extends AbstractFixture implements DependentFixtureInterface
             'gender' => 0,
             'position' => 0,
             'description' => 'Hair Expert',
-            'roles' => ['barber-role'],
+            'roles' => ['owner-role'],
             'website' => 'heliotrope-society'
         ],
         'heliotrope-jessica-team' => [

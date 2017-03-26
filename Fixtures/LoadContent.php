@@ -413,7 +413,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 'service_in_category' => true,
                 'service' => false,
                 'category' => true,
-                'roles' => []
+                'categories' => []
             ]
         ]
     ];
