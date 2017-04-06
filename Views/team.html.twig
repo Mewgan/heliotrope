@@ -15,12 +15,15 @@
                     {% for member in team %}
                         <div class="item">
                             <div class="trainer-item">
-                                <div class="trainer-thumb"><img src="{{ img(member.photo.path) }}" alt="{{ member.photo.alt }}"
-                                                                class="img-fullwidth img-responsive"></div>
+                                {% if member.photo is null %}
+                                <div class="trainer-thumb">
+                                    <img src="{{ asset('user-photo.png') }}" alt="default photo"
+                                                            class="img-fullwidth img-responsive">
+                                </div>
                                 <div class="trainer-info">
                                     <div class="trainer-biography">
-                                        <h3 class="text-white">{{ member.full_name }}</h3>
-                                        <h5 class="text-white">
+                                        <h3 class="text-black">{{ member.full_name }}</h3>
+                                        <h5 class="text-black">
                                             {% for role in member.roles %}
                                                 {{ role.name }}
                                             {% endfor %}
@@ -28,6 +31,23 @@
                                         <p style="color: white">{{ member.description | raw }}</p>
                                     </div>
                                 </div>
+                                {% else %}
+                                    <div class="trainer-thumb">
+                                        <img src="{{ img(member.photo.path) }}" alt="{{ member.photo.alt }}"
+                                             class="img-fullwidth img-responsive">
+                                    </div>
+                                    <div class="trainer-info">
+                                        <div class="trainer-biography">
+                                            <h3 class="text-white">{{ member.full_name }}</h3>
+                                            <h5 class="text-white">
+                                                {% for role in member.roles %}
+                                                    {{ role.name }}
+                                                {% endfor %}
+                                            </h5>
+                                            <p style="color: white">{{ member.description | raw }}</p>
+                                        </div>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
