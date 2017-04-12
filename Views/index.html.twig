@@ -28,11 +28,13 @@
                 <div class="row">
                     <div class="col-md-3">
                         {% set about_us = field_render('homepage_about_us', 'page') %}
+                        {% if about_us.title != '' %}
                         <div class="about-info">
                             <h4 class="text-uppercase letter-space-2 mb-0">{{ about_us.title }}</h4>
                             <p class="font-13">{{ about_us.description }}</p>
                             <a href="{{ link('module:post.type:dynamic.action:read',{'slug': about_us.slug}) }}" class="btn btn-theme-colored btn-sm">Voir plus</a>
                         </div>
+                        {% endif %}
                     </div>
                     {{ content_render('list_home_service') }}
                     <div class="col-md-3">

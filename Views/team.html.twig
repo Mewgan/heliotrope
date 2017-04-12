@@ -21,6 +21,13 @@
                                                             class="img-fullwidth img-responsive">
                                 </div>
                                 <div class="trainer-info">
+                                {% else %}
+                                    <div class="trainer-thumb">
+                                        <img src="{{ img(member.photo.path) }}" alt="{{ member.photo.alt }}"
+                                             class="img-fullwidth img-responsive">
+                                    </div>
+                                {% endif %}
+                                <div class="trainer-info">
                                     <div class="trainer-biography">
                                         <h3 class="text-black">{{ member.full_name }}</h3>
                                         <h5 class="text-black">
@@ -28,26 +35,9 @@
                                                 {{ role.name }}
                                             {% endfor %}
                                         </h5>
-                                        <p style="color: white">{{ member.description | raw }}</p>
+                                        <p class="text-black">{{ member.description | raw }}</p>
                                     </div>
                                 </div>
-                                {% else %}
-                                    <div class="trainer-thumb">
-                                        <img src="{{ img(member.photo.path) }}" alt="{{ member.photo.alt }}"
-                                             class="img-fullwidth img-responsive">
-                                    </div>
-                                    <div class="trainer-info">
-                                        <div class="trainer-biography">
-                                            <h3 class="text-white">{{ member.full_name }}</h3>
-                                            <h5 class="text-white">
-                                                {% for role in member.roles %}
-                                                    {{ role.name }}
-                                                {% endfor %}
-                                            </h5>
-                                            <p style="color: white">{{ member.description | raw }}</p>
-                                        </div>
-                                    </div>
-                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}

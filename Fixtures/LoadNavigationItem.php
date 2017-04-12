@@ -33,7 +33,7 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
             'website' => 'heliotrope-society',
         ],
         [
-            'title' => 'Services',
+            'title' => 'Service',
             'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],
@@ -45,7 +45,7 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
             'website' => 'heliotrope-society',
         ],
         [
-            'title' => 'Tarifs',
+            'title' => 'Tarif',
             'navigation' => 'heliotrope-menu',
             'parent' => null,
             'children' => [],

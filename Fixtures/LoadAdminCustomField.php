@@ -118,8 +118,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'value' => [
-                    '#',
-                    '#',
+                    '',
+                    '',
                 ]
             ]
         ],
@@ -196,7 +196,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Heliotrope Default Global',
             'data' => [],
-            'content' => ['value' => '#']
+            'content' => ['value' => '']
         ],
         /* Theme specific */
         'heliotrope_layout_mode' => [
@@ -384,8 +384,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => [
                 'page@society-heliotrope-home' => '<h1 style="text-align: right" class="text-theme-colored text-uppercase font-playfair font-weight-600 font-100 line-height-1 m-0">Women\'s</h1>
                 <h2 style="text-align: right" class="font-playfair font-48 text-white font-weight-400 m-0"> Hairstyle &amp; Fashion</h2>
-                <p style="text-align: right" class="text-white font-weight-200 font-18 mt-10">Every day we bring hope to millions of children in the world\'s <br>hardest places as a sign of God\'s unconditional love.</p>
-                <a style="text-align: right;float:right;" href="{{booking_link}}" class="btn btn-theme-colored btn-circled btn-lg smooth-scroll-to-target mt-10">Réserver</a>'
+                <p style="text-align: right" class="text-white font-weight-200 font-18 mt-10">Every day we bring hope to millions of children in the world\'s <br>hardest places as a sign of God\'s unconditional love.</p>{% if booking_link != "" %}
+                <a style="text-align: right;float:right;" href="{{booking_link}}" class="btn btn-theme-colored btn-circled btn-lg smooth-scroll-to-target mt-10">Réserver</a>{% endif %}'
             ]
         ],
         'heliotrope_homepage_about_us' => [
@@ -467,9 +467,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'page@society-heliotrope-home-slider' => [
-                    ['Get Your Dreamy', 'Hairstyle'],
-                    ['- Estimated Since 1986 -', 'We Are With You'],
-                    ['Most Popular Barber', 'Saloon']
+                    ['Révélez votre', 'Style'],
+                    ['- depuis 1986 -', 'Nous prenons soin de vous '],
+                    ['Le meilleur barbier de ', 'Paris']
                 ]
             ]
         ],
@@ -646,7 +646,6 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Article',
             'name' => 'homepage_about_us',
             'type' => 'post',
-            'website' => 'Aster Website',
             'position' => 2,
             'parent' => null,
             'cf' => 'Heliotrope Home Page Slider',

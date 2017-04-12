@@ -46,7 +46,9 @@
                             <h3 class="text-theme-colored text-uppercase letter-space-2">Horaires d'ouverture !</h3>
                             <div class="item-html divider text-white" >
                                 {{ opening_hours | raw }}
+                                {% if booking_link != '' %}
                                 <a href="{{ booking_link }}" class="btn btn-theme-colored btn-flat btn-lg mt-20">Réserver</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -54,9 +56,11 @@
                         {% set about_us = field_render('homepage_about_us', 'page') %}
                         <i class="flaticon-scissors font-60"></i>
                         <h5 class="letter-space-8 text-uppercase text-theme-colored">Bienvenue sur {{ salon.name }}</h5>
+                        {% if about_us.title != '' %}
                         <h3 class="text-uppercase">{{ about_us.title }}</h3>
                         <p>{{ about_us.description }}</p>
                         <a href="{{ link('module:post.type:dynamic.action:read',{'slug': about_us.slug}) }}" class="btn btn-theme-colored btn-sm">Voir plus</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -101,6 +105,14 @@
     <!-- Section: News & Blog -->
     <section id="news">
         <div class="container">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase title">Nos <span
+                                    class="text-black font-weight-300">Actualités</span></h2>
+                    </div>
+                </div>
+            </div>
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-12">
