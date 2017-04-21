@@ -41,7 +41,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'type' => 'static',
         ],
         'society-heliotrope-service' =>  [
-            'title' => 'Service',
+            'title' => 'Services',
             'route' => 'module:post.type:static.action:list.name:service',
             'website' => 'Heliotrope Website',
             'layout' => 'heliotrope_page_layout',
@@ -68,7 +68,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'type' => 'static',
         ],
         'society-heliotrope-actualite' =>  [
-            'title' => 'Actualité',
+            'title' => 'Actualités',
             'route' => 'module:post.type:static.action:list.name:actualite',
             'website' => 'Heliotrope Website',
             'layout' => 'heliotrope_page_layout',
