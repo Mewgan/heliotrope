@@ -385,7 +385,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 'page@society-heliotrope-home' => '<h1 style="text-align: right" class="text-theme-colored text-uppercase font-playfair font-weight-600 font-100 line-height-1 m-0">Coiffure</h1>
                 <h2 style="text-align: right" class="font-playfair font-48 text-white font-weight-400 m-0"> féminine et mode</h2>
                 <p style="text-align: right" class="text-white font-weight-200 font-18 mt-10">Chaque jour nous proposons à nos clients un accueil chaleureux et des prestations de qualité.<br/> Découvrez notre salon dès aujourd\'hui et n\'hésitez pas à prendre votre premier RDV en ligne !</p>{% if booking_link != "" %}
-                <a style="text-align: right;float:right;" href="{{booking_link}}" class="btn btn-theme-colored btn-circled btn-lg smooth-scroll-to-target mt-10">Réserver</a>{% endif %}'
+                <a style="text-align: right;float:right;" href="{{booking_link}}" class="btn btn-theme-colored btn-circled btn-lg mt-10">Réserver</a>{% endif %}'
             ]
         ],
         'heliotrope_homepage_about_us' => [
