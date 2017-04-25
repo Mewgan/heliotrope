@@ -77,7 +77,7 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Heliotrope Website'
         ],
         'Heliotrope Seo' => [
-            'title' => 'SEO',
+            'title' => 'SEO Référencement naturel',
             'rule' => 'everywhere_rule',
             'operation' => '=',
             'value' => null,
