@@ -173,17 +173,17 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Default Global',
             'data' => [],
             'content' => ['value' => '<ul class="list-border">
-                                <li class="clearfix"><span> Mon - Tues :  </span>
-                                    <div class="value pull-right"> 6.00 am - 10.00 pm</div>
+                                <li class="clearfix"><span> Lun - Mar :  </span>
+                                    <div class="value pull-right"> 6h00 - 22h00 </div>
                                 </li>
-                                <li class="clearfix"><span> Wednes - Thurs :</span>
-                                    <div class="value pull-right"> 8.00 am - 6.00 pm</div>
+                                <li class="clearfix"><span> Mer - Jeu :</span>
+                                    <div class="value pull-right"> 8h00 - 18h00</div>
                                 </li>
-                                <li class="clearfix"><span> Fri : </span>
-                                    <div class="value pull-right"> 3.00 pm - 8.00 pm</div>
+                                <li class="clearfix"><span> Ven - Sam : </span>
+                                    <div class="value pull-right"> 15h00 - 20h00</div>
                                 </li>
-                                <li class="clearfix"><span> Sun : </span>
-                                    <div class="value pull-right"> Colosed</div>
+                                <li class="clearfix"><span> Dim : </span>
+                                    <div class="value pull-right"> Fermé</div>
                                 </li>
                             </ul>']
         ],
