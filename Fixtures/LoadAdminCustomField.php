@@ -137,6 +137,19 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => []
         ],
         /* Global */
+        'heliotrope_favicon' => [
+            'scope' => 'global',
+            'title' => 'Favicon',
+            'name' => 'favicon',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Heliotrope Default Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/public/media/default/favicon.ico']
+        ],
         'heliotrope_logo' => [
             'scope' => 'global',
             'title' => 'Logo',

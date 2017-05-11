@@ -27,7 +27,7 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Heliotrope Website'
         ],
         'Heliotrope Global Seo' => [
-            'title' => 'SEO Global',
+            'title' => 'Google analytics',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
