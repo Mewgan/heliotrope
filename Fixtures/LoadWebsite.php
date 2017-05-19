@@ -18,7 +18,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' => 'Heliotrope',
             'layout' => 'heliotrope_layout',
             'render_system' => 'php',
-            'logo' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
@@ -99,6 +99,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' =>  'Heliotrope',
             'layout' => 'heliotrope_layout',
             'render_system' => 'php',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
@@ -123,9 +124,9 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'society' => 'Sanji Society',
             'domain' => 'sanji-society',
             'theme' => 'Heliotrope',
-            'logo' => '/src/Themes/Heliotrope/Resources/public/img/logo-wide-white.png',
             'layout' => 'heliotrope_layout',
             'render_system' => 'php',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
