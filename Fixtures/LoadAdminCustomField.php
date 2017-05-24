@@ -364,7 +364,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Page */
         'heliotrope_page' => [
             'scope' => 'specified',
-            'title' => 'Image du bandeau du haut (Header)',
+            'title' => 'Image du bandeau du haut',
             'name' => 'subheader',
             'type' => 'media',
             'position' => 0,
@@ -707,7 +707,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Heliotrope Gallery Page',
             'data' => [],
             'content' => [
-                'page@society-heliotrope-gallery' => ['Branding', 'Design', 'Photography']
+                'page@society-heliotrope-gallery' => ['Marque', 'Conception', 'Photographie']
             ]
         ],
         'heliotrope_gallery' => [
@@ -755,7 +755,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'heliotrope_gallery',
             'cf' => 'Heliotrope Gallery Page',
             'data' => [],
-            'content' => ['page@society-heliotrope-gallery' => ['Photography', 'Branding', 'Design', 'Branding', 'Photography', 'Design', 'Branding']
+            'content' => ['page@society-heliotrope-gallery' => ['Photographie', 'Marque', 'Conception', 'Marque', 'Photographie', 'Conception', 'Marque']
             ]
         ],
     ];
