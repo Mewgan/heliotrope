@@ -15,13 +15,13 @@ class LoadTheme extends AbstractFixture implements DependentFixtureInterface
     protected $data = [
         [
             'name' => 'Heliotrope',
-            'profession' => 'barber',
+            'professions' => ['barber'],
             'thumbnail' => '/public/media/default/thumbnail/theme-heliotrope-thumbnail.png',
             'state' => 1,
         ],
         [
             'name' => 'Heliotrope Slider',
-            'profession' => 'barber',
+            'professions' => ['barber'],
             'thumbnail' => '/public/media/default/thumbnail/theme-heliotrope-slider-thumbnail.png',
             'state' => 1,
         ]
