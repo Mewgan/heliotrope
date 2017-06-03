@@ -19,4 +19,9 @@
         </div>
     </div>
 </section>
+<script>
+    document.title = "{{ field_render('meta_title', 'post@' ~ post.id) }}";
+    $('meta[name=description]').attr('content', "{{ field_render('meta_description', 'post@' ~ post.id) }}");
+    $('meta[name=keywords]').attr('content', "{{ field_render('meta_keywords', 'post@' ~ post.id) }}");
+</script>
 

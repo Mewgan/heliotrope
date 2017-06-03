@@ -203,7 +203,7 @@
                         <ul class="styled-icons icon-dark icon-circled icon-sm">
                             {% for social in socials %}
                                 <li><a target="_blank" href="{{ social.link }}"><i
-                                                class="fa fa-{{ social.name | lower }} fa-lg"></i></a></li>
+                                                class="fa fa-{{ social.name | replace({' ': '-'}) | lower }} fa-lg"></i></a></li>
                             {% endfor %}
                         </ul>
                     </div>
