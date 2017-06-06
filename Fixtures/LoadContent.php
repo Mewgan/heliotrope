@@ -45,6 +45,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 2,
                 'db' => [
                     [
@@ -79,6 +80,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 6,
                 'db' => [
                     [
@@ -114,6 +116,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 4,
                 'db' => [
                     [
@@ -148,6 +151,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 6,
                 'db' => [
                     [
@@ -182,6 +186,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 100,
                 'db' => [
                     [
@@ -216,6 +221,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 100,
                 'db' => [
                     [
@@ -250,6 +256,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
+                'max' => '',
                 'total_row' => 100,
                 'db' => [
                     [
