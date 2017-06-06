@@ -90,6 +90,8 @@
 
 
     <!-- Section: Clients -->
+    {% set partners = field_render('home_list_partners', 'page') %}
+    {% if not partners is empty %}
     <section class="divider parallax layer-overlay overlay-dark"  data-bg-img="{{ img(field_render('partners_background','page').path) }}" data-parallax-ratio="0.7" >
         <div class="container">
             <div class="section-title text-center">
@@ -103,12 +105,19 @@
             <div class="section-content">
                 <div class="row">
                     <div class="owl-carousel-6col clients-logo carousel">
-                        {{ content_render('list_home_partners') }}
+                        {% for partner in partners %}
+                            <div class="item">
+                                <a>
+                                    <img src="{{ img(partner.image.path) }}" alt="{{ partner.image.alt }}">
+                                </a>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    {% endif %}
 
     <!-- Section: News & Blog -->
     <section id="news">
