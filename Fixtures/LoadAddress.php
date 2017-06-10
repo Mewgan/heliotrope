@@ -28,7 +28,7 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
             'country' => 'FRANCE',
         ],
         'sanji-address' => [
-            'address' => '86 Avenu Henri Barbusse',
+            'address' => '86 Avenue Henri Barbusse',
             'city' => 'Clamart',
             'postal_code' => '92140',
             'society' => 'Sanji Society',
