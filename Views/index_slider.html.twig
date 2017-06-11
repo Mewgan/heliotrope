@@ -79,14 +79,14 @@
             </div>
             <div class="section-content">
                 <div class="row">
-                    {{ content_render('list_home_service') }}
+                    {{ content_render('list_home_service') | raw }}
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section: trainer -->
-    {{ content_render('team') }}
+    {{ content_render('team') | raw }}
 
 
     <!-- Section: Clients -->
@@ -133,7 +133,7 @@
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-12">
-                        {{ content_render('list_home_news') }}
+                        {{ content_render('list_home_news') | raw }}
                     </div>
                 </div>
             </div>

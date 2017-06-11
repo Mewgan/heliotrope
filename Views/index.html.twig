@@ -1,9 +1,5 @@
 {% extends template_from_string(data.website_layout) %}
 
-{% block css %}
-
-{% endblock %}
-
 {% block page %}
     <!-- Section: home -->
     <section id="home" class="divider parallax fullscreen" data-parallax-ratio="0.7"
@@ -36,7 +32,7 @@
                         </div>
                         {% endif %}
                     </div>
-                    {{ content_render('list_home_service') }}
+                    {{ content_render('list_home_service') | raw }}
                     <div class="col-md-3">
                         <div class="opening-hours p-15 pt-20 pb-60" style="background: black;">
                             <h4 class="line-bottom text-white font-weight-400 mt-0">Horaires d'ouverture</h4>
@@ -48,9 +44,9 @@
         </div>
     </section>
 
-    {{ content_render('team') }}
+    {{ content_render('team') | raw }}
 
-    {{ content_render('list_home_news') }}
+    {{ content_render('list_home_news') | raw }}
 
     <!-- Section: Clients -->
     {% set partners = field_render('home_list_partners', 'page') %}

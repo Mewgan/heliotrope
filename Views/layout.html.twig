@@ -2,13 +2,18 @@
 <html lang="fr">
 <head>
     {% block head %}
+
+        {{ _seo.offsetSet('title', field_render('meta_title', 'page')) }}
+        {{ _seo.offsetSet('description', field_render('meta_description', 'page')) }}
+        {{ _seo.offsetSet('keywords', field_render('meta_keywords', 'page')) }}
+
         <!-- Meta Tags -->
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <!-- Page Title -->
-        <title>{% block title %}{{ field_render('meta_title','page') }}{% endblock %}</title>
-        <meta name="description" content="{% block description %}{{ field_render('meta_description','page') }}{% endblock %}"/>
-        <meta name="keywords" content="{% block keywords %}{{ field_render('meta_keywords','page') }}{% endblock %}" />
+        <title>{% block title deferred %}{{ _seo.title }}{% endblock %}</title>
+        <meta name="description" content="{% block description deferred %}{{ _seo.description }}{% endblock %}">
+        <meta name="keywords" content="{% block keywords deferred %}{{ _seo.keywords }}{% endblock %}" />
         <link rel="icon" href="{{ img(field_render('favicon').path) }}" />
         <!-- Stylesheet -->
         <link rel="stylesheet" href="{{ asset('libs/jquery/jquery-ui.min.css') }}" type="text/css">
@@ -113,7 +118,7 @@
                         <a class="menuzord-brand pull-left flip" href="{{ link('home') }}">
                             <img src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
                         </a>
-                        {{ content_render('navigation') }}
+                        {{ content_render('navigation') | raw }}
                     </nav>
                 </div>
             </div>
@@ -157,7 +162,7 @@
                             <a class="menuzord-brand pull-left flip" href="{{ link('home') }}">
                                 <img src="{{ img(sub_logo.path) }}" alt="{{ sub_logo.alt }}">
                             </a>
-                            {{ content_render('navigation') }}
+                            {{ content_render('navigation') | raw }}
                         </nav>
                     </div>
                 </div>
