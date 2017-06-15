@@ -116,7 +116,11 @@
                     <nav id="menuzord-right"
                          class="menuzord menuzord-responsive {{ field_render('navigation_color') }}">
                         <a class="menuzord-brand pull-left flip" href="{{ link('home') }}">
-                            <img src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
+                            {% if logo.path is defined %}
+                                <img src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
+                            {% else %}
+                                <span class="fz1 text-white">{{ salon.name }}</span>
+                            {% endif %}
                         </a>
                         {{ content_render('navigation') | raw }}
                     </nav>

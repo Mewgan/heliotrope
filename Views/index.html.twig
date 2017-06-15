@@ -49,8 +49,6 @@
     {{ content_render('list_home_news') | raw }}
 
     <!-- Section: Clients -->
-    {% set partners = field_render('home_list_partners', 'page') %}
-    {% if not partners is empty %}
     <section class="divider bg-light">
         <div class="container pt-30 pb-30">
             <div class="section-title text-center">
@@ -64,18 +62,11 @@
             <div class="section-content">
                 <div class="row">
                     <div class="owl-carousel-6col clients-logo carousel">
-                        {% for partner in partners %}
-                            <div class="item">
-                                <a>
-                                    <img src="{{ img(partner.image.path) }}" alt="{{ partner.image.alt }}">
-                                </a>
-                            </div>
-                        {% endfor %}
+                        {{ content_render('list_home_partners') | raw }}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    {% endif %}
 
 {% endblock %}
