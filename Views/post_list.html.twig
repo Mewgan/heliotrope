@@ -4,18 +4,8 @@
             <div class="row">
                 {% if data.route_params.slug == 'actualite' %}
                     {% for post in posts %}
-                        {% set params = {} %}
-                        {% for arg in args %}
-                            {% if arg.value != '' %}
-                                {% set params = params|merge({(arg.route):arg.value}) %}
-                            {% else %}
-                                {% if arg.alias == 'p' %}
-                                    {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
-                                {% elseif arg.alias == 'c' %}
-                                    {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
+
+                        {% set params = get_post_params(args, post) %}
 
                         <div class="col-md-3 wow fadeInUp mt-30 mb-30" data-wow-duration="1s" data-wow-delay="0.5s">
                             <article class="post clearfix maxwidth600 mb-sm-30">
@@ -43,18 +33,9 @@
                     {% endfor %}
                 {% else %}
                     {% for post in posts %}
-                        {% set params = {} %}
-                        {% for arg in args %}
-                            {% if arg.value != '' %}
-                                {% set params = params|merge({(arg.route):arg.value}) %}
-                            {% else %}
-                                {% if arg.alias == 'p' %}
-                                    {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
-                                {% elseif arg.alias == 'c' %}
-                                    {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
+
+                        {% set params = get_post_params(args, post) %}
+
                         <div class="col-md-4 mb-sm-40 mt-30 mb-30">
                             <div class="thumb border-effect">
                                 <img alt="{{ post.thumbnail.alt }}" src="{{ img(post.thumbnail.path) }}"

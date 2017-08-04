@@ -1,16 +1,5 @@
 {% for post in posts %}
-    {% set params = {} %}
-    {% for arg in args %}
-        {% if arg.value != '' %}
-            {% set params = params|merge({(arg.route):arg.value}) %}
-        {% else %}
-            {% if arg.alias == 'p' %}
-                {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
-            {% elseif arg.alias == 'c' %}
-                {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
+    {% set params = get_post_params(args, post) %}
     <div class="col-md-3">
         <img data-src="{{ img(post.thumbnail.path) }}" style="width: 100%" class="lazyload" alt="{{ post.thumbnail.alt }}">
         <h4 class="line-bottom font-weight-400">{{ post.title }}</h4>
