@@ -16,18 +16,21 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
             'name' => 'Heliotrope Society',
             'email' => 'contact@heliotrope.com',
             'phone' => '0123456789',
+            'address' => 'heliotrope-address',
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
             'name' => 'Heliotrope Slider Society',
             'email' => 'contact@heliotrope-slider.com',
             'phone' => '0123456789',
+            'address' => 'heliotrope-slider-address',
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
             'name' => 'Sanji Society',
             'email' => 'contact@sanji.com',
             'phone' => '0123456789',
+            'address' => 'sanji-address',
             'account' => 'sanji@onepiece.com'
         ]
     ];
@@ -46,7 +49,8 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
     function getDependencies()
     {
         return [
-            'Jet\DataFixtures\LoadAccount'
+            'Jet\DataFixtures\LoadAccount',
+            'Jet\Themes\Heliotrope\Fixtures\LoadAddress'
         ];
     }
 }

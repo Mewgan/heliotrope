@@ -92,7 +92,7 @@
 </head>
 <body class="{% if field_render('layout_mode') == 'boxed' %}boxed-layout bg-gray-light pt-40 pb-40 p-sm-0{% endif %}">
 
-{% set salon = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
+{% set society = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
 {% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
 {% set opening_hours = field_render('opening_hours') %}
 {% set logo = field_render('logo') %}
@@ -119,7 +119,7 @@
                             {% if logo.path is defined %}
                                 <img src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
                             {% else %}
-                                <span class="fz1 text-white">{{ salon.name }}</span>
+                                <span class="fz1 text-white">{{ society.name }}</span>
                             {% endif %}
                         </a>
                         {{ content_render('navigation') | raw }}
@@ -138,10 +138,10 @@
                             <div class="widget m-0 mt-5 no-border">
                                 <ul class="list-inline text-left sm-text-center">
                                     <li class="pl-10 pr-10 mb-0 pb-0">
-                                        <div class="header-widget text-white"><i class="fa fa-phone"></i> {{ salon.phone }} </div>
+                                        <div class="header-widget text-white"><i class="fa fa-phone"></i> {{ society.phone }} </div>
                                     </li>
                                     <li class="pl-10 pr-10 mb-0 pb-0">
-                                        <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> {{ salon.email }}</div>
+                                        <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> {{ society.email }}</div>
                                     </li>
                                 </ul>
                             </div>
@@ -192,9 +192,9 @@
                             <br/>{{ address.country }}</p>
                         <ul class="list-inline mt-5">
                             <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i> <a
-                                        class="text-gray">{{ salon.phone }}</a></li>
+                                        class="text-gray">{{ society.phone }}</a></li>
                             <li class="m-0 pl-10 pr-10"><i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a
-                                        class="text-gray" href="mailto:{{ salon.email }}">{{ salon.email }}</a></li>
+                                        class="text-gray" href="mailto:{{ society.email }}">{{ society.email }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
             <div class="container pt-20 pb-20">
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="font-11 text-black-777 m-0">Copyright &copy;{{ "now" | date("Y") }} {{ salon.name }}</p>
+                        <p class="font-11 text-black-777 m-0">Copyright &copy;{{ "now" | date("Y") }} {{ society.name }}</p>
                     </div>
                 </div>
             </div>
